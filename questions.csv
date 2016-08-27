@@ -3,31 +3,102 @@
 ,,,,,integer,N
 ,,,,,str,N
 ,,,,,bool,N
-1,Which of the following statements is most correct?,beginner,javascript,30s,JavaScript variables are dynamically typed.,Y
+1,Which of the following is the reserved word used for defining a function?,beginner,javascript,30s,function,Y
+,,,,,def,N
+,,,,,funct,N
+,,,,,var,N
+2,Which of the following will return the type of an identifier?,beginner,javascript,30s,typeof,Y
+,,,,,enum,N
+,,,,,type,N
+,,,,,const,N
+3,Which of the following will not create an Object?,beginner,javascript,30s,undefined,Y
+,,,,,{},N
+,,,,,new Object(),N
+,,,,,Object.create(null),N
+4,Which of the following reserved words allow you to create a block scoped variable?,beginner,javascript,30s,let,Y
+,,,,,var,N
+,,,,,int,N
+,,,,,bool,N
+5,Which of the following statements is most correct?,beginner,javascript,30s,JavaScript variables are dynamically typed.,Y
 ,,,,,JavaScript has no data types.,N
 ,,,,,JavaScript is compiled.,N
 ,,,,,JavaScript is not object oriented.,N
-2,What is a statement that could be used to describe closure in JavaScript?,intermediate,javascript,1m,Functions defined within another function have access to variables declared in the outer scope.,Y
-,,,,,Functions have access to all variables defined in all other functions.,N
-,,,,,Functions return a single value.,N
-,,,,,Functions are call by object reference.,N
-3,What is the standard that governs the JavaScript language?,beginner,javascript,30s,ECMAScript,Y
+6,What is the standard that governs the JavaScript language?,beginner,javascript,30s,ECMAScript,Y
 ,,,,,Oracle,N
 ,,,,,Java,N
 ,,,,,PEP,N
-4,The value NaN is of what type?,intermediate,javascript,30s,Number,Y
+7,Which set of reserved words are not used for flow of control in JavaScript.,beginner,javascript,30s,"if, elif, else",Y
+,,,,,"if, else if, else",N
+,,,,,"for, continue, break",N
+,,,,,"switch, case",N
+8,Which function is used to import modules in Node.js?,beginner,"javascript, nodejs",30s,require,Y
+,,,,,port,N
+,,,,,retrieve,N
+,,,,,find,N
+9,"In the browser, what object is consider the global object?",beginner,javascript,30s,window,Y
+,,,,,document,N
+,,,,,global,N
+,,,,,page,N
+10,"In the browser, which of the following will create a new variable scope?",beginner,javascript,30s,function block,Y
+,,,,,if block,N
+,,,,,for block,N
+,,,,,while block,N
+11,Which of the following provides inheritance in JavaScript?,beginner,javascript,30s,function prototype,Y
+,,,,,templates,N
+,,,,,interfaces,N
+,,,,,generics,N
+12,"When referring to a 'callback' in JavaScript, which is the most correct answer?",beginner,javascript,30s,A function passed as an argument to be called later.,Y
+,,,,,An object passed as an argument.,N
+,,,,,A string passed as an argument to reference a method to be called.,N
+,,,,,An undefined value.,N
+13,What keyword in JavaScript is designed to create instances of types?,beginner,javascript,30s,new,Y
+,,,,,old,N
+,,,,,free,N
+,,,,,create,N
+14,"In the browser, which of the following is the best answer for the construct used to create 'modules of code'.",beginner,"javascript, browser",30s,function,Y
+,,,,,object literals,N
+,,,,,arrays,N
+,,,,,strings,N
+15,"When the following code is run, what is the output?
+
+var x = 42;
+x = ""100"";
+console.log(x);",beginner,javascript,30s,100,Y
+,,,,,42,N
+,,,,,"Error, can't change variable type",N
+16,What is the de facto developer/debugging object in JavaScript?,beginner,javascript,30s,console,Y
+,,,,,ast,N
+,,,,,print,N
+,,,,,log,N
+17,What does JSON stand for?,beginner,"javascript, JSON",30s,JavaScript Object Notation,Y
+,,,,,JScript Object Notation,N
+,,,,,JavaScript Object Notary,N
+,,,,,Java Serialization Object Notation,N
+18,What is the de facto method used to return an object as a string?,beginner,javascript,30s,.toString(),Y
+,,,,,.repr(),N
+,,,,,.str(),N
+,,,,,.serialize(),N
+19,What is the global object designed to be used to convert objects to JSON?,beginner,javascript,30s,JSON,Y
+,,,,,Marshal,N
+,,,,,String,N
+,,,,,Send,N
+20,What is a statement that could be used to describe closure in JavaScript?,intermediate,javascript,1m,Functions defined within another function have access to variables declared in the outer scope.,Y
+,,,,,Functions have access to all variables defined in all other functions.,N
+,,,,,Functions return a single value.,N
+,,,,,Functions are call by object reference.,N
+21,The value NaN is of what type?,intermediate,javascript,30s,Number,Y
 ,,,,,Boolean,N
 ,,,,,Undefined,N
 ,,,,,Null,N
-5,What of the following types is not a native type in ECMAScript?,intermediate,javascript,30s,HashMap,Y
+22,What of the following types is not a native type in ECMAScript?,intermediate,javascript,30s,HashMap,Y
 ,,,,,Array,N
 ,,,,,Function,N
 ,,,,,Error,N
-6,Which of the following methods is not a function method?,intermediate,javascript,30s,split,Y
+23,Which of the following methods is not a function method?,intermediate,javascript,30s,split,Y
 ,,,,,apply,N
 ,,,,,call,N
 ,,,,,bind,N
-7,"What is output to the console when this code is run?
+24,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -37,7 +108,7 @@ console.log(val);",expert,javascript,1m,3,Y
 ,,,,,1,N
 ,,,,,This code produces an error,N
 ,,,,,undefined,N
-8,"What is output to the console when this code is run?
+25,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -47,7 +118,7 @@ console.log(val);",expert,javascript,1m,4,Y
 ,,,,,3,N
 ,,,,,This code produces an error,N
 ,,,,,undefined,N
-9,"What is output to the console when this code is run?
+26,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;

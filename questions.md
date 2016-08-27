@@ -1,3 +1,10 @@
+
+
+
+# Beginner
+
+
+
 ```
 Which of the following is a reserved word used to declare variables?
 ```
@@ -17,6 +24,92 @@ Which of the following is a reserved word used to declare variables?
     * Tags
         * javascript
 2. meta end
+
+
+```
+Which of the following is the reserved word used for defining a function?
+```
+
+1. meta
+    * Answers
+        * function
+        * def
+        * funct
+        * var
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+Which of the following will return the type of an identifier?
+```
+
+1. meta
+    * Answers
+        * typeof
+        * enum
+        * type
+        * const
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+Which of the following will not create an Object?
+```
+
+1. meta
+    * Answers
+        * undefined
+        * {}
+        * new Object()
+        * Object.create(null)
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+Which of the following reserved words allow you to create a block scoped variable?
+```
+
+1. meta
+    * Answers
+        * let
+        * var
+        * int
+        * bool
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
 
 ```
 Which of the following statements is most correct?
@@ -38,26 +131,6 @@ Which of the following statements is most correct?
         * javascript
 2. meta end
 
-```
-What is a statement that could be used to describe closure in JavaScript?
-```
-
-1. meta
-    * Answers
-        * Functions defined within another function have access to variables declared in the outer scope.
-        * Functions have access to all variables defined in all other functions.
-        * Functions return a single value.
-        * Functions are call by object reference.
-    * Time
-        * 1m
-    * Category
-        * theory
-    * Level
-        * intermediate
-    * Tags
-        * javascript
-2. meta end
-
 
 ```
 What is the standard that governs the JavaScript language?
@@ -75,6 +148,308 @@ What is the standard that governs the JavaScript language?
         * practical
     * Level
         * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+Which set of reserved words are not used for flow of control in JavaScript.
+```
+
+1. meta
+    * Answers
+        * if, elif, else
+        * if, else if, else
+        * for, continue, break
+        * switch, case
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+Which function is used to import modules in Node.js?
+```
+
+1. meta
+    * Answers
+        * require
+        * port
+        * retrieve
+        * find
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+        * nodejs
+2. meta end
+
+
+```
+In the browser, what object is consider the global object?
+```
+
+1. meta
+    * Answers
+        * window
+        * document
+        * global
+        * page
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+In the browser, which of the following will create a new variable scope?
+```
+
+1. meta
+    * Answers
+        * function block
+        * if block
+        * for block
+        * while block
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+Which of the following provides inheritance in JavaScript?
+```
+
+1. meta
+    * Answers
+        * function prototype
+        * templates
+        * interfaces
+        * generics
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+When referring to a 'callback' in JavaScript, which is the most correct answer?
+```
+
+1. meta
+    * Answers
+        * A function passed as an argument to be called later.
+        * An object passed as an argument.
+        * A string passed as an argument to reference a method to be called.
+        * An undefined value.
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+What keyword in JavaScript is designed to create instances of types?
+```
+
+1. meta
+    * Answers
+        * new
+        * old
+        * free
+        * create
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+In the browser, which of the following is the best answer for the construct used to create 'modules of code'.
+```
+
+1. meta
+    * Answers
+        * function
+        * object literals
+        * arrays
+        * strings
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript, browser
+2. meta end
+
+
+```
+When the following code is run, what is the output?
+
+var x = 42;
+x = "100";
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * 100
+        * 42
+        * Error, can't change variable type
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+What is the de facto developer/debugging object in JavaScript?
+```
+
+1. meta
+    * Answers
+        * console
+        * ast
+        * print
+        * log
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+What does JSON stand for?
+```
+
+1. meta
+    * Answers
+        * JavaScript Object Notation
+        * JScript Object Notation
+        * JavaScript Object Notary
+        * Java Serialization Object Notation
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript, JSON
+2. meta end
+
+
+```
+What is the de facto method used to return an object as a string?
+```
+
+1. meta
+    * Answers
+        * .toString()
+        * .repr()
+        * .str()
+        * .serialize()
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+```
+What is the global object designed to be used to convert objects to JSON?
+```
+
+1. meta
+    * Answers
+        * JSON
+        * Marshal
+        * String
+        * Send
+    * Time
+        * 30s
+    * Category
+        * practical
+    * Level
+        * beginner
+    * Tags
+        * javascript
+2. meta end
+
+
+# Intermediate
+
+
+
+```
+What is a statement that could be used to describe closure in JavaScript?
+```
+
+1. meta
+    * Answers
+        * Functions defined within another function have access to variables declared in the outer scope.
+        * Functions have access to all variables defined in all other functions.
+        * Functions return a single value.
+        * Functions are call by object reference.
+    * Time
+        * 1m
+    * Category
+        * theory
+    * Level
+        * intermediate
     * Tags
         * javascript
 2. meta end
@@ -141,6 +516,11 @@ Which of the following methods is not a function method?
     * Tags
         * javascript
 2. meta end
+
+
+
+# Expert
+
 
 
 ```
