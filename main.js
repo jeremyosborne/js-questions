@@ -38,7 +38,20 @@ var questions = (function () {
   return questions
 })()
 
+// Stats
 // console.log(questions)
+var stats = questions.reduce(function (stats, q) {
+  if (stats[q.level]) {
+    stats[q.level] += 1
+  } else {
+    stats[q.level] = 1
+  }
+  return stats
+}, {})
+console.log('** Stats **')
+for (var p in stats) {
+  console.log('Category (%s): %s', p, stats[p])
+}
 
 // TODO: Output to CSV.
 
