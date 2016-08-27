@@ -1,0 +1,59 @@
+#,Question,Level,Tags,Time,Answer Choices,Is Correct
+0,Which of the following is a reserved word used to declare variables?,beginner,javascript,30s,var,Y
+,,,,,integer,N
+,,,,,str,N
+,,,,,bool,N
+1,Which of the following statements is most correct?,beginner,javascript,30s,JavaScript variables are dynamically typed.,Y
+,,,,,JavaScript has no data types.,N
+,,,,,JavaScript is compiled.,N
+,,,,,JavaScript is not object oriented.,N
+2,What is a statement that could be used to describe closure in JavaScript?,intermediate,javascript,1m,Functions defined within another function have access to variables declared in the outer scope.,Y
+,,,,,Functions have access to all variables defined in all other functions.,N
+,,,,,Functions return a single value.,N
+,,,,,Functions are call by object reference.,N
+3,What is the standard that governs the JavaScript language?,beginner,javascript,30s,ECMAScript,Y
+,,,,,Oracle,N
+,,,,,Java,N
+,,,,,PEP,N
+4,The value NaN is of what type?,intermediate,javascript,30s,Number,Y
+,,,,,Boolean,N
+,,,,,Undefined,N
+,,,,,Null,N
+5,What of the following types is not a native type in ECMAScript?,intermediate,javascript,30s,HashMap,Y
+,,,,,Array,N
+,,,,,Function,N
+,,,,,Error,N
+6,Which of the following methods is not a function method?,intermediate,javascript,30s,split,Y
+,,,,,apply,N
+,,,,,call,N
+,,,,,bind,N
+7,"What is output to the console when this code is run?
+
+var f = function(a) {
+    return a.length;
+}
+var val = f.call(null, [1, 2, 3]);
+console.log(val);",expert,javascript,1m,3,Y
+,,,,,1,N
+,,,,,This code produces an error,N
+,,,,,undefined,N
+8,"What is output to the console when this code is run?
+
+var f = function(a) {
+    return a.length;
+}
+var val = f.apply(null, [""abcd"", ""123"", ""456""]);
+console.log(val);",expert,javascript,1m,4,Y
+,,,,,3,N
+,,,,,This code produces an error,N
+,,,,,undefined,N
+9,"What is output to the console when this code is run?
+
+var f = function(a) {
+    return a.length;
+}
+var val = f.bind(null, [""abcd"", ""123"", ""456""])();
+console.log(val);",expert,javascript,1m,3,Y
+,,,,,4,N
+,,,,,This code produces an error,N
+,,,,,undefined,N

@@ -1,5 +1,6 @@
 var assert = require('assert')
 var cheerio = require('cheerio')
+var csvStringify = require('csv-stringify')
 var fs = require('fs')
 var marked = require('marked')
 
@@ -37,6 +38,29 @@ var questions = (function () {
   return questions
 })()
 
-console.log(questions)
+// console.log(questions)
 
 // TODO: Output to CSV.
+
+var records = (function (questions) {
+  // Build in headers.
+  var records = [['#', 'Question', 'Level', 'Tags', 'Time', 'Answer Choices', 'Is Correct']]
+  for (var i = 0; i < questions.length; i++) {
+    var q = questions[i]
+    // Answers beyond the first need their own records on their own lines with empty other columns.
+    // In this structure, first answer is always correct, the rest are not.
+    records.push([i, q.question, q.level, q.tags.join(', '), q.time, q.answers[0], 'Y'])
+    for (var j = 1; j < q.answers.length; j++) {
+      records.push(['', '', '', '', '', q.answers[j], 'N'])
+    }
+  }
+  return records
+})(questions)
+
+csvStringify(records, function (err, csv) {
+  if (err) {
+    console.error('Something happened during csv processing:', err)
+  }
+  // console.log(csv)
+  fs.writeFileSync('questions.csv', csv)
+})
