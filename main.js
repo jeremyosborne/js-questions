@@ -52,19 +52,20 @@ console.log('** Stats **')
 for (var p in stats) {
   console.log('Category (%s): %s', p, stats[p])
 }
+console.log('Total questions:', questions.length)
 
 // TODO: Output to CSV.
 
 var records = (function (questions) {
   // Build in headers.
-  var records = [['#', 'Question', 'Level', 'Tags', 'Time', 'Answer Choices', 'Is Correct']]
+  var records = [['#', 'Question', 'Category', 'Level', 'Tags', 'Time', 'Answer Choices', 'IsAnswer']]
   for (var i = 0; i < questions.length; i++) {
     var q = questions[i]
     // Answers beyond the first need their own records on their own lines with empty other columns.
     // In this structure, first answer is always correct, the rest are not.
-    records.push([i, q.question, q.level, q.tags.join(', '), q.time, q.answers[0], 'Y'])
+    records.push([i, q.question, q.category, q.level, q.tags.join(', '), q.time, q.answers[0], 'Y'])
     for (var j = 1; j < q.answers.length; j++) {
-      records.push(['', '', '', '', '', q.answers[j], 'N'])
+      records.push(['', '', '', '', '', '', q.answers[j], 'N'])
     }
   }
   return records
