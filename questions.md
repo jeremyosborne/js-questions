@@ -16,7 +16,7 @@ Which of the following is a reserved word used to declare variables?
         * str
         * bool
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -37,7 +37,7 @@ Which of the following is the reserved word used for defining a function?
         * funct
         * var
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -58,7 +58,7 @@ Which of the following will return the type of an identifier?
         * type
         * const
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -79,7 +79,7 @@ Which of the following will not create an Object?
         * new Object()
         * Object.create(null)
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -100,7 +100,7 @@ Which of the following reserved words allow you to create a block scoped variabl
         * int
         * bool
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -122,7 +122,7 @@ Which of the following statements is most correct?
         * JavaScript is compiled.
         * JavaScript is not object oriented.
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -143,7 +143,7 @@ What is the standard that governs the JavaScript language?
         * Java
         * PEP
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -164,7 +164,7 @@ Which set of reserved words are not used for flow of control in JavaScript.
         * for, continue, break
         * switch, case
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -185,14 +185,14 @@ Which function is used to import modules in Node.js?
         * retrieve
         * find
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
         * Beginner
     * Tags
         * JavaScript
-        * nodejs
+        * Node.js
 2. meta end
 
 
@@ -207,7 +207,7 @@ In the browser, what object is consider the global object?
         * global
         * page
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -228,7 +228,7 @@ In the browser, which of the following will create a new variable scope?
         * for block
         * while block
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -249,7 +249,7 @@ Which of the following provides inheritance in JavaScript?
         * interfaces
         * generics
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -270,7 +270,7 @@ When referring to a 'callback' in JavaScript, which is the most correct answer?
         * A string passed as an argument to reference a method to be called.
         * An undefined value.
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -291,7 +291,7 @@ What keyword in JavaScript is designed to create instances of types?
         * free
         * create
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -312,13 +312,14 @@ In the browser, which of the following is the best answer for the construct used
         * arrays
         * strings
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
         * Beginner
     * Tags
-        * JavaScript, browser
+        * JavaScript
+        * Browser
 2. meta end
 
 
@@ -336,7 +337,7 @@ console.log(x);
         * 42
         * Error, can't change variable type
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -357,7 +358,7 @@ What is the de facto developer/debugging object in JavaScript?
         * print
         * log
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -378,7 +379,7 @@ What does JSON stand for?
         * JavaScript Object Notary
         * Java Serialization Object Notation
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -399,7 +400,7 @@ What is the de facto method used to return an object as a string?
         * .str()
         * .serialize()
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -420,7 +421,7 @@ What is the global object designed to be used to convert objects to JSON?
         * String
         * Send
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -445,7 +446,7 @@ What is a statement that could be used to describe closure in JavaScript?
         * Functions return a single value.
         * Functions are call by object reference.
     * Time
-        * 1 min
+        * 1 Minuteute
     * Category
         * Theory
     * Level
@@ -466,7 +467,7 @@ The value NaN is of what type?
         * Undefined
         * Null
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -487,7 +488,7 @@ What of the following types is not a native type in ECMAScript?
         * Function
         * Error
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -508,7 +509,7 @@ Which of the following methods is not a function method?
         * call
         * bind
     * Time
-        * 30 sec
+        * 30 Seconds
     * Category
         * Practical
     * Level
@@ -540,7 +541,7 @@ console.log(val);
         * This code produces an error
         * undefined
     * Time
-        * 1 min
+        * 1 Minute
     * Category
         * Practical
     * Level
@@ -567,7 +568,7 @@ console.log(val);
         * This code produces an error
         * undefined
     * Time
-        * 1 min
+        * 1 Minute
     * Category
         * Practical
     * Level
@@ -594,7 +595,7 @@ console.log(val);
         * This code produces an error
         * undefined
     * Time
-        * 1 min
+        * 1 Minute
     * Category
         * Practical
     * Level
