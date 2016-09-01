@@ -86,19 +86,223 @@ console.log(x);",Practical,Beginner,JavaScript,30 Seconds,100,Y
 ,,,,,,Functions have access to all variables defined in all other functions.,N
 ,,,,,,Functions return a single value.,N
 ,,,,,,Functions are call by object reference.,N
-21,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
-,,,,,,Boolean,N
-,,,,,,Undefined,N
-,,,,,,Null,N
-22,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
-,,,,,,Array,N
-,,,,,,Function,N
-,,,,,,Error,N
-23,Which of the following methods is not a function method?,Practical,Intermediate,JavaScript,30 Seconds,split,Y
+21,Which of the following methods is not a function method?,Practical,Intermediate,JavaScript,30 Seconds,split,Y
 ,,,,,,apply,N
 ,,,,,,call,N
 ,,,,,,bind,N
-24,"What is output to the console when this code is run?
+22,"What is the value of printed by console.log?
+
+var x = 10;
+var f = function () {
+    x = 42;
+};
+f();
+console.log(x);",Practical,Intermediate,JavaScript,1 Minute,42,Y
+,,,,,,10,N
+,,,,,,undefined,N
+,,,,,,Error,N
+23,"What is the value printed by console.log?
+
+var x = 10;
+var f = function () {
+    var x = 42;
+};
+f();
+console.log(x);",Practical,Intermediate,JavaScript,1 Minute,10,Y
+,,,,,,42,N
+,,,,,,undefined,N
+,,,,,,Error,N
+24,"What is the value printed by console.log when the code is run in the browser?
+
+var x = 10;
+var f = function () {
+    var x = 42;
+    console.log(window.x);
+};
+f();",Practical,Intermediate,"JavaScript, Browser",1 Minute,10,Y
+,,,,,,42,N
+,,,,,,undefined,N
+,,,,,,Error,N
+25,"What is the value printed by console.log when the code is run?
+
+var x = 10;
+var f = function (x) {
+    x = 42;
+    return x;
+};
+f();
+console.log(x);",Practical,Intermediate,JavaScript,1 Minute,10,Y
+,,,,,,42,N
+,,,,,,undefined,N
+,,,,,,Error,N
+26,"What is the value printed by console.log when the code is run?
+
+var x = 10;
+var f = function () {
+    var x = 42;
+    (function() {
+        x = 84;
+    })();
+    console.log(x);
+};
+f();",Practical,Intermediate,JavaScript,2 Minutes,84,Y
+,,,,,,42,N
+,,,,,,10,N
+,,,,,,undefined,N
+27,"What is the value printed by console.log when the code is run?
+
+var x = {};
+var f = function (y) {
+    y.test = 42;
+};
+f(x);
+console.log(x.test)",Practical,Intermediate,JavaScript,1 Minute,42,Y
+,,,,,,Error,N
+,,,,,,undefined,N
+,,,,,,null,N
+28,"What is the value printed by console.log when the code is run?
+
+var x = {};
+var f = function (y) {
+    y = {}
+    y.test = 42;
+};
+f(x);
+console.log(x.test)",Practical,Intermediate,JavaScript,1 Minute,undefined,Y
+,,,,,,42,N
+,,,,,,Error,N
+,,,,,,null,N
+29,"What is the value printed by console.log when the code is run?
+
+for (var i = 0; i < 10; i++) {
+    /* pretend code exists here */
+}
+console.log(i)",Practical,Intermediate,JavaScript,1 Minute,10,Y
+,,,,,,9,N
+,,,,,,Error,N
+,,,,,,undefined,N
+30,"What is the value printed by console.log when the code is run?
+
+for (let i = 0; i < 10; i++) {
+    /* pretend code exists here */
+}
+console.log(i)",Practical,Intermediate,JavaScript,1 Minute,Error,Y
+,,,,,,0,N
+,,,,,,10,N
+,,,,,,undefined,N
+31,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
+,,,,,,Boolean,N
+,,,,,,Undefined,N
+,,,,,,Null,N
+32,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
+,,,,,,Array,N
+,,,,,,Function,N
+,,,,,,Error,N
+33,"What is the value printed by console.log?
+
+var x = [1, 2, 3];
+var y = x.slice(1);
+x[1] = 4;
+console.log(y);",Practical,Intermediate,JavaScript,1 Minute,"[2, 3]",Y
+,,,,,,"[1, 2, 3]",N
+,,,,,,"[1, 4, 3]",N
+,,,,,,"[4, 3]",N
+34,"What is the value printed by console.log?
+
+var x = [1, 2, 3];
+x.shift();
+x.unshift(0);
+x.pop();
+x.push(4);
+console.log(x);",Practical,Intermediate,JavaScript,1 Minute,"[0, 2, 4]",Y
+,,,,,,"[1, 2, 3]",N
+,,,,,,"[1, 3, 5]",N
+,,,,,,"[0, 1, 2, 3, 4]",N
+35,"What is printed in the console output?
+
+var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+x.sort();
+console.log(x);",Practical,Intermediate,JavaScript,1 Minute,"[1, 10, 2, 3, 4, 5, 6, 7, 8, 9]",Y
+,,,,,,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",N
+,,,,,,"[10, 1, 2, 3, 4, 5, 6, 7, 8, 9]",N
+36,"What is the value printed by console.log?
+
+var x = {a: 10, b: 10};
+x.b += x.a;
+var y = x;
+y.b += x.a;
+console.log(x.b);",Practical,Intermediate,JavaScript,2 Minutes,30,Y
+,,,,,,20,N
+,,,,,,10,N
+,,,,,,40,N
+37,"What is the value printed by console.log?
+
+var x = {a: 10, b: 10};
+console.log(x.toString());",Practical,Intermediate,JavaScript,2 Minutes,[object Object],Y
+,,,,,,"""{a: 10, b: 10}""",N
+,,,,,,"""10, 10""",N
+,,,,,,Error,N
+38,"What is the value printed by console.log?
+
+var x = {a: 10, b: 10};
+console.log(x.toString());",Practical,Intermediate,JavaScript,2 Minutes,[object Object],Y
+,,,,,,"""{a: 10, b: 10}""",N
+,,,,,,"""10, 10""",N
+,,,,,,Error,N
+39,"What is the value printed by console.log?
+
+var a = 42 + ""42"";
+console.log(a);",Practical,Intermediate,JavaScript,1 Minute,4242,Y
+,,,,,,84,N
+,,,,,,Error,N
+,,,,,,42,N
+40,"What is the value printed by console.log?
+
+var a = 42 - ""42"";
+console.log(a);",Practical,Intermediate,JavaScript,1 Minute,0,Y
+,,,,,,4242,N
+,,,,,,Error,N
+,,,,,,42,N
+41,"What is the value printed by console.log?
+
+console.log(null == undefined);",Practical,Intermediate,JavaScript,1 Minute,0,Y
+,,,,,,4242,N
+,,,,,,Error,N
+,,,,,,42,N
+42,Which explanation is most correct about how '==' is different from '==='?,Practical,Intermediate,JavaScript,1 Minute,'===' checks value and type.,Y
+,,,,,,'==' checks value and type.,N
+,,,,,,'===' is not used in JavaScript.,N
+43,Which of the following will throw an error in JavaScript Strict Mode?,Practical,Intermediate,JavaScript,1 Minute,Assigning a value to an undeclared variable will throw an error.,Y
+,,,,,,Creating objects with new Object().,N
+,,,,,,Accessing the arguments object.,N
+44,"What is the value printed by console.log?
+
+var f = function (a, b) {
+    console.log(arguments.length);
+}
+f(1, 2, 3);",Practical,Intermediate,JavaScript,1 Minute,3,Y
+,,,,,,1,N
+,,,,,,2,N
+,,,,,,undefined,N
+45,"What is the value printed by console.log?
+
+var f = function (a, b) {
+    return a + b;
+}
+console.log(f.length);",Practical,Intermediate,JavaScript,1 Minute,3,Y
+,,,,,,1,N
+,,,,,,2,N
+,,,,,,undefined,N
+46,"What is the value printed by console.log?
+
+var Animal = function (a) {
+    this.name = a;
+}
+var cat = new Animal(""Tom"")
+console.log(cat.name);",Practical,Intermediate,JavaScript,1 Minute,Tom,Y
+,,,,,,undefined,N
+,,,,,,Error,N
+47,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -108,7 +312,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,3,Y
 ,,,,,,1,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-25,"What is output to the console when this code is run?
+48,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -118,7 +322,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,4,Y
 ,,,,,,3,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-26,"What is output to the console when this code is run?
+49,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;

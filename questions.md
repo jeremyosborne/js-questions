@@ -457,6 +457,286 @@ What is a statement that could be used to describe closure in JavaScript?
 
 
 ```
+Which of the following methods is not a function method?
+```
+
+1. meta
+    * Answers
+        * split
+        * apply
+        * call
+        * bind
+    * Time
+        * 30 Seconds
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+## Intermediate - Scope
+
+```
+What is the value of printed by console.log?
+
+var x = 10;
+var f = function () {
+    x = 42;
+};
+f();
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * 42
+        * 10
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var x = 10;
+var f = function () {
+    var x = 42;
+};
+f();
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * 10
+        * 42
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log when the code is run in the browser?
+
+var x = 10;
+var f = function () {
+    var x = 42;
+    console.log(window.x);
+};
+f();
+```
+
+1. meta
+    * Answers
+        * 10
+        * 42
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript, Browser
+2. meta end
+
+
+```
+What is the value printed by console.log when the code is run?
+
+var x = 10;
+var f = function (x) {
+    x = 42;
+    return x;
+};
+f();
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * 10
+        * 42
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
+```
+What is the value printed by console.log when the code is run?
+
+var x = 10;
+var f = function () {
+    var x = 42;
+    (function() {
+        x = 84;
+    })();
+    console.log(x);
+};
+f();
+```
+
+1. meta
+    * Answers
+        * 84
+        * 42
+        * 10
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log when the code is run?
+
+var x = {};
+var f = function (y) {
+    y.test = 42;
+};
+f(x);
+console.log(x.test)
+```
+
+1. meta
+    * Answers
+        * 42
+        * Error
+        * undefined
+        * null
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log when the code is run?
+
+var x = {};
+var f = function (y) {
+    y = {}
+    y.test = 42;
+};
+f(x);
+console.log(x.test)
+```
+
+1. meta
+    * Answers
+        * undefined
+        * 42
+        * Error
+        * null
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log when the code is run?
+
+for (var i = 0; i < 10; i++) {
+    /* pretend code exists here */
+}
+console.log(i)
+```
+
+1. meta
+    * Answers
+        * 10
+        * 9
+        * Error
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log when the code is run?
+
+for (let i = 0; i < 10; i++) {
+    /* pretend code exists here */
+}
+console.log(i)
+```
+
+1. meta
+    * Answers
+        * Error
+        * 0
+        * 10
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+## Intermediate - Primitive and Native types
+
+
+```
 The value NaN is of what type?
 ```
 
@@ -499,17 +779,22 @@ What of the following types is not a native type in ECMAScript?
 
 
 ```
-Which of the following methods is not a function method?
+What is the value printed by console.log?
+
+var x = [1, 2, 3];
+var y = x.slice(1);
+x[1] = 4;
+console.log(y);
 ```
 
 1. meta
     * Answers
-        * split
-        * apply
-        * call
-        * bind
+        * [2, 3]
+        * [1, 2, 3]
+        * [1, 4, 3]
+        * [4, 3]
     * Time
-        * 30 Seconds
+        * 1 Minute
     * Category
         * Practical
     * Level
@@ -518,6 +803,324 @@ Which of the following methods is not a function method?
         * JavaScript
 2. meta end
 
+
+```
+What is the value printed by console.log?
+
+var x = [1, 2, 3];
+x.shift();
+x.unshift(0);
+x.pop();
+x.push(4);
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * [0, 2, 4]
+        * [1, 2, 3]
+        * [1, 3, 5]
+        * [0, 1, 2, 3, 4]
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
+```
+What is printed in the console output?
+
+var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+x.sort();
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * [1, 10, 2, 3, 4, 5, 6, 7, 8, 9]
+        * [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        * [10, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var x = {a: 10, b: 10};
+x.b += x.a;
+var y = x;
+y.b += x.a;
+console.log(x.b);
+```
+
+1. meta
+    * Answers
+        * 30
+        * 20
+        * 10
+        * 40
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var x = {a: 10, b: 10};
+console.log(x.toString());
+```
+
+1. meta
+    * Answers
+        * [object Object]
+        * "{a: 10, b: 10}"
+        * "10, 10"
+        * Error
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var x = {a: 10, b: 10};
+console.log(x.toString());
+```
+
+1. meta
+    * Answers
+        * [object Object]
+        * "{a: 10, b: 10}"
+        * "10, 10"
+        * Error
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var a = 42 + "42";
+console.log(a);
+```
+
+1. meta
+    * Answers
+        * 4242
+        * 84
+        * Error
+        * 42
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var a = 42 - "42";
+console.log(a);
+```
+
+1. meta
+    * Answers
+        * 0
+        * 4242
+        * Error
+        * 42
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+console.log(null == undefined);
+```
+
+1. meta
+    * Answers
+        * 0
+        * 4242
+        * Error
+        * 42
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Which explanation is most correct about how '==' is different from '==='?
+```
+
+1. meta
+    * Answers
+        * '===' checks value and type.
+        * '==' checks value and type.
+        * '===' is not used in JavaScript.
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Which of the following will throw an error in JavaScript Strict Mode?
+```
+
+1. meta
+    * Answers
+        * Assigning a value to an undeclared variable will throw an error.
+        * Creating objects with new Object().
+        * Accessing the arguments object.
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+## Intermediate - Functions
+
+```
+What is the value printed by console.log?
+
+var f = function (a, b) {
+    console.log(arguments.length);
+}
+f(1, 2, 3);
+```
+
+1. meta
+    * Answers
+        * 3
+        * 1
+        * 2
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function (a, b) {
+    return a + b;
+}
+console.log(f.length);
+```
+
+1. meta
+    * Answers
+        * 3
+        * 1
+        * 2
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    this.name = a;
+}
+var cat = new Animal("Tom")
+console.log(cat.name);
+```
+
+1. meta
+    * Answers
+        * Tom
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
 
 
 # Expert
