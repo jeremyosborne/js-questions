@@ -279,7 +279,7 @@ console.log(null == undefined);",Practical,Intermediate,JavaScript,1 Minute,0,Y
 
 var f = function (a, b) {
     console.log(arguments.length);
-}
+};
 f(1, 2, 3);",Practical,Intermediate,JavaScript,1 Minute,3,Y
 ,,,,,,1,N
 ,,,,,,2,N
@@ -288,7 +288,7 @@ f(1, 2, 3);",Practical,Intermediate,JavaScript,1 Minute,3,Y
 
 var f = function (a, b) {
     return a + b;
-}
+};
 console.log(f.length);",Practical,Intermediate,JavaScript,1 Minute,3,Y
 ,,,,,,1,N
 ,,,,,,2,N
@@ -297,12 +297,63 @@ console.log(f.length);",Practical,Intermediate,JavaScript,1 Minute,3,Y
 
 var Animal = function (a) {
     this.name = a;
-}
-var cat = new Animal(""Tom"")
+};
+var cat = new Animal(""Tom"");
 console.log(cat.name);",Practical,Intermediate,JavaScript,1 Minute,Tom,Y
 ,,,,,,undefined,N
 ,,,,,,Error,N
-47,"What is output to the console when this code is run?
+47,"What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+    this.getName = function () {
+        return name;
+    };
+};
+var cat = new Animal(""Tom"");
+console.log(cat.name);",Practical,Intermediate,JavaScript,1 Minute,undefined,Y
+,,,,,,Tom,N
+,,,,,,Error,N
+48,"What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+    this.getName = function () {
+        return name;
+    };
+};
+var cat = new Animal(""Tom"");
+console.log(cat.getName());",Practical,Intermediate,JavaScript,1 Minute,Tom,Y
+,,,,,,undefined,N
+,,,,,,Error,N
+49,"What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+};
+Animal.prototype.getName = function () {
+    return name;
+};
+var cat = new Animal(""Tom"");
+console.log(cat.getName());",Practical,Intermediate,JavaScript,1 Minute,Error,Y
+,,,,,,undefined,N
+,,,,,,Tom,N
+50,"Which statement is most correct when describing the differences between:
+
+// Function Declaration
+function f () {
+    return 42;
+}
+
+and:
+
+// Function Expression
+var f = function () {
+    return 42;
+};",Practical,Intermediate,JavaScript,1 Minute,The Function Declaration is hoisted and can be defined before being used.,Y
+,,,,,,There is no difference.,N
+,,,,,,The results of typeof of the Function Expression is 'function' while the typeof of the Function Declaration is 'object'.,N
+51,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -312,7 +363,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,3,Y
 ,,,,,,1,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-48,"What is output to the console when this code is run?
+52,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -322,7 +373,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,4,Y
 ,,,,,,3,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-49,"What is output to the console when this code is run?
+53,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;

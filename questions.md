@@ -1050,7 +1050,7 @@ What is the value printed by console.log?
 
 var f = function (a, b) {
     console.log(arguments.length);
-}
+};
 f(1, 2, 3);
 ```
 
@@ -1076,7 +1076,7 @@ What is the value printed by console.log?
 
 var f = function (a, b) {
     return a + b;
-}
+};
 console.log(f.length);
 ```
 
@@ -1102,8 +1102,8 @@ What is the value printed by console.log?
 
 var Animal = function (a) {
     this.name = a;
-}
-var cat = new Animal("Tom")
+};
+var cat = new Animal("Tom");
 console.log(cat.name);
 ```
 
@@ -1123,8 +1123,183 @@ console.log(cat.name);
 2. meta end
 
 
-# Expert
+```
+What is the value printed by console.log?
 
+var Animal = function (a) {
+    var name = a;
+    this.getName = function () {
+        return name;
+    };
+};
+var cat = new Animal("Tom");
+console.log(cat.name);
+```
+
+1. meta
+    * Answers
+        * undefined
+        * Tom
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+    this.getName = function () {
+        return name;
+    };
+};
+var cat = new Animal("Tom");
+console.log(cat.getName());
+```
+
+1. meta
+    * Answers
+        * Tom
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+};
+Animal.prototype.getName = function () {
+    return name;
+};
+var cat = new Animal("Tom");
+console.log(cat.getName());
+```
+
+1. meta
+    * Answers
+        * Error
+        * undefined
+        * Tom
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Which statement is most correct when describing the differences between:
+
+// Function Declaration
+function f () {
+    return 42;
+}
+
+and:
+
+// Function Expression
+var f = function () {
+    return 42;
+};
+```
+
+1. meta
+    * Answers
+        * The Function Declaration is hoisted and can be defined before being used.
+        * There is no difference.
+        * The results of typeof of the Function Expression is 'function' while the typeof of the Function Declaration is 'object'.
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function () {
+    return function () {
+        return 42;
+    };
+};
+console.log(f()());
+```
+
+1. meta
+    * Answers
+        * 42
+        * Error
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Disregarding whether or not this is a good practice, what is the value printed by console.log?
+
+Object.prototype._color = 'green';
+var Cat = function (color) {
+    color = color || this._color;
+    this.color = function () {
+        return color;
+    };
+};
+var tom = new Cat();
+console.log(tom.color());
+```
+
+1. meta
+    * Answers
+        * green
+        * Error
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+# Expert
 
 
 ```
