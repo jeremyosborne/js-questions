@@ -477,6 +477,634 @@ Which of the following methods is not a function method?
 2. meta end
 
 
+## Intermediate - Async
+
+
+```
+What is printed by the console.log statements?
+
+var f = function () {
+    console.log(2);
+};
+setTimeout(f, 10);
+console.log(1);
+```
+
+1. meta
+    * Answers
+        * 1, 2
+        * 2, 1
+        * 1
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed by the console.log statements?
+
+var a = 0;
+var b = 1;
+var f = function () {
+    a = 2;
+    b = 3;
+    console.log(b);
+};
+setTimeout(f, 10);
+console.log(a);
+```
+
+1. meta
+    * Answers
+        * 0, 3
+        * 0, 1
+        * 2, 3
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed by the console.log statement?
+
+var f = function () {
+    var i = 1;
+    console.log(i++);
+    setTimeout(f, 100);
+};
+f();
+```
+
+1. meta
+    * Answers
+        * 1, 1, 1, 1, 1...
+        * 1, 2, 3, 4, 5...
+        * 1
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed by console.log?
+
+var f = function () {
+    var i = 1;
+    console.log(i++);
+};
+setInterval(f, 10);
+```
+
+1. meta
+    * Answers
+        * 1, 1, 1, 1, 1...
+        * 1, 2, 3, 4, 5...
+        * 1
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Assuming we are in a web browser, what is printed by console.log?
+
+window.addEventListener("load", function () {
+    document.body.addEventListener("click", function () {
+        console.log(2);
+    });
+    console.log(3);
+});
+console.log(1);
+```
+
+1. meta
+    * Answers
+        * 1, 3
+        * 1, 2, 3
+        * 1, 3, 2
+        * 1
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+        * Browser
+2. meta end
+
+
+```
+What is printed by console.log?
+
+var f = function () {
+    console.log(42);
+};
+var id = setInterval(f, 10);
+clearInterval(id);
+```
+
+1. meta
+    * Answers
+        * nothing is printed
+        * 42
+        * 42, 42, 42, 42
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Assuming we are working with idiomatic Node.js, what would be an accurate statement to make about `fs.readFile` and `fs.readFileSync`?
+```
+
+1. meta
+    * Answers
+        * fs.readFileSync is blocking and the code will wait for the function to return before continuing.
+        * fs.readFile is blocking and will wait for the function to return before continuing.
+        * fs.readFileSync will optionally take a callback.
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed by console.log?
+
+var i = 0;
+setTimeout(function () {
+    i += 1;
+    console.log(i);
+}, 100)
+setTimeout(function () {
+    console.log("hi");
+}, 200);
+console.log("hello")
+```
+
+1. meta
+    * Answers
+        * hello, 1, hi
+        * hello, hi
+        * hello, 1, hi, 2, 3, 4....
+        * hello 0, hi
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+## Intermediate - Functions
+
+
+```
+What is the value printed by console.log?
+
+var f = function (a, b) {
+    console.log(arguments.length);
+};
+f(1, 2, 3);
+```
+
+1. meta
+    * Answers
+        * 3
+        * 1
+        * 2
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function (a, b) {
+    return a + b;
+};
+console.log(f.length);
+```
+
+1. meta
+    * Answers
+        * 3
+        * 1
+        * 2
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    this.name = a;
+};
+var cat = new Animal("Tom");
+console.log(cat.name);
+```
+
+1. meta
+    * Answers
+        * Tom
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+    this.getName = function () {
+        return name;
+    };
+};
+var cat = new Animal("Tom");
+console.log(cat.name);
+```
+
+1. meta
+    * Answers
+        * undefined
+        * Tom
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+    this.getName = function () {
+        return name;
+    };
+};
+var cat = new Animal("Tom");
+console.log(cat.getName());
+```
+
+1. meta
+    * Answers
+        * Tom
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var Animal = function (a) {
+    var name = a;
+};
+Animal.prototype.getName = function () {
+    return name;
+};
+var cat = new Animal("Tom");
+console.log(cat.getName());
+```
+
+1. meta
+    * Answers
+        * Error
+        * undefined
+        * Tom
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Which statement is most correct when describing the differences between:
+
+// Function Declaration
+function f () {
+    return 42;
+}
+
+and:
+
+// Function Expression
+var f = function () {
+    return 42;
+};
+```
+
+1. meta
+    * Answers
+        * The Function Declaration is hoisted and can be defined before being used.
+        * There is no difference.
+        * The results of typeof of the Function Expression is 'function' while the typeof of the Function Declaration is 'object'.
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function () {
+    return function () {
+        return 42;
+    };
+};
+console.log(f()());
+```
+
+1. meta
+    * Answers
+        * 42
+        * Error
+        * undefined
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+## Intermediate - Prototype and Inheritance
+
+```
+Disregarding whether or not this is a good practice, what is the value printed by console.log?
+
+Object.prototype._color = 'green';
+var Cat = function (color) {
+    color = color || this._color;
+    this.color = function () {
+        return color;
+    };
+};
+var tom = new Cat();
+console.log(tom.color());
+```
+
+1. meta
+    * Answers
+        * green
+        * Error
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What will be printed by console.log?
+
+var Animal = function (name) {
+    this.name = name || "blah";
+};
+Animal.prototype.speak = function () {
+    return "My name is: " + this.name;
+};
+
+var Cat = function (name) {
+    this.name = name || "Tom";
+};
+Cat.prototype = new Animal();
+
+var c = new Cat();
+console.log(c.speak());
+```
+
+1. meta
+    * Answers
+        * My name is: Tom
+        * My name is: blah
+        * undefined
+        * Error
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What will be printed by console.log?
+
+var Animal = function (name) {
+    this.name = name || "blah";
+};
+Animal.prototype.speak = function () {
+    return "My name is: " + this.name;
+};
+
+var Cat = function (name) {
+    this.name = name || "Tom";
+};
+Cat.prototype = new Animal();
+Cat.prototype.speak = function () {
+    return this.name + " says meow!";
+};
+
+var c = new Cat();
+console.log(c.speak());
+```
+
+1. meta
+    * Answers
+        * Tom says meow!
+        * My name is: Tom
+        * My name is: blah
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What will be printed by console.log?
+
+var Animal = function (name) {
+    this.name = name || "blah";
+};
+Animal.prototype.speak = function () {
+    return "My name is: " + this.name;
+};
+
+var Cat = function () {};
+Cat.prototype = new Animal();
+Cat.prototype.speak = function () {
+    return this.name + " says meow!";
+};
+
+var c = new Cat("Tom");
+console.log(c.speak());
+```
+
+1. meta
+    * Answers
+        * blah says meow!
+        * My name is: Tom
+        * My name is: blah
+        * Tom says meow!
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What will be printed by console.log?
+
+var Animal = function (name) {
+    this.name = name || "blah";
+};
+Animal.prototype.speak = function () {
+    return "My name is: " + this.name;
+};
+
+var Cat = function () {};
+Cat.prototype = new Animal();
+Cat.speak = function () {
+    return this.name + " says meow!";
+};
+
+var c = new Cat("Tom");
+console.log(c.speak());
+```
+
+1. meta
+    * Answers
+        * My name is: blah
+        * blah says meow!
+        * My name is: Tom
+        * Tom says meow!
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
 ## Intermediate - Scope
 
 ```
@@ -733,7 +1361,7 @@ console.log(i)
 2. meta end
 
 
-## Intermediate - Primitive and Native types
+## Intermediate - Types: Primitive and Native
 
 
 ```
@@ -1043,22 +1671,16 @@ Which of the following will throw an error in JavaScript Strict Mode?
 2. meta end
 
 
-## Intermediate - Functions
-
 ```
-What is the value printed by console.log?
+What is printed to console.log?
 
-var f = function (a, b) {
-    console.log(arguments.length);
-};
-f(1, 2, 3);
+console.log(parseInt("123.45"));
 ```
 
 1. meta
     * Answers
-        * 3
-        * 1
-        * 2
+        * 123
+        * 123.45
         * undefined
     * Time
         * 1 Minute
@@ -1072,20 +1694,15 @@ f(1, 2, 3);
 
 
 ```
-What is the value printed by console.log?
+What is printed to console.log?
 
-var f = function (a, b) {
-    return a + b;
-};
-console.log(f.length);
+console.log(isNaN("42"));
 ```
 
 1. meta
     * Answers
-        * 3
-        * 1
-        * 2
-        * undefined
+        * false
+        * true
     * Time
         * 1 Minute
     * Category
@@ -1098,20 +1715,17 @@ console.log(f.length);
 
 
 ```
-What is the value printed by console.log?
+What is printed to console.log?
 
-var Animal = function (a) {
-    this.name = a;
-};
-var cat = new Animal("Tom");
-console.log(cat.name);
+var s = "hello how are you?";
+s.replace("hello", "mellow");
+console.log(s);
 ```
 
 1. meta
     * Answers
-        * Tom
-        * undefined
-        * Error
+        * hello how are you?
+        * mellow how are you?
     * Time
         * 1 Minute
     * Category
@@ -1123,183 +1737,7 @@ console.log(cat.name);
 2. meta end
 
 
-```
-What is the value printed by console.log?
-
-var Animal = function (a) {
-    var name = a;
-    this.getName = function () {
-        return name;
-    };
-};
-var cat = new Animal("Tom");
-console.log(cat.name);
-```
-
-1. meta
-    * Answers
-        * undefined
-        * Tom
-        * Error
-    * Time
-        * 1 Minute
-    * Category
-        * Practical
-    * Level
-        * Intermediate
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-What is the value printed by console.log?
-
-var Animal = function (a) {
-    var name = a;
-    this.getName = function () {
-        return name;
-    };
-};
-var cat = new Animal("Tom");
-console.log(cat.getName());
-```
-
-1. meta
-    * Answers
-        * Tom
-        * undefined
-        * Error
-    * Time
-        * 1 Minute
-    * Category
-        * Practical
-    * Level
-        * Intermediate
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-What is the value printed by console.log?
-
-var Animal = function (a) {
-    var name = a;
-};
-Animal.prototype.getName = function () {
-    return name;
-};
-var cat = new Animal("Tom");
-console.log(cat.getName());
-```
-
-1. meta
-    * Answers
-        * Error
-        * undefined
-        * Tom
-    * Time
-        * 1 Minute
-    * Category
-        * Practical
-    * Level
-        * Intermediate
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-Which statement is most correct when describing the differences between:
-
-// Function Declaration
-function f () {
-    return 42;
-}
-
-and:
-
-// Function Expression
-var f = function () {
-    return 42;
-};
-```
-
-1. meta
-    * Answers
-        * The Function Declaration is hoisted and can be defined before being used.
-        * There is no difference.
-        * The results of typeof of the Function Expression is 'function' while the typeof of the Function Declaration is 'object'.
-    * Time
-        * 1 Minute
-    * Category
-        * Practical
-    * Level
-        * Intermediate
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-What is the value printed by console.log?
-
-var f = function () {
-    return function () {
-        return 42;
-    };
-};
-console.log(f()());
-```
-
-1. meta
-    * Answers
-        * 42
-        * Error
-        * undefined
-    * Time
-        * 1 Minute
-    * Category
-        * Practical
-    * Level
-        * Intermediate
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-Disregarding whether or not this is a good practice, what is the value printed by console.log?
-
-Object.prototype._color = 'green';
-var Cat = function (color) {
-    color = color || this._color;
-    this.color = function () {
-        return color;
-    };
-};
-var tom = new Cat();
-console.log(tom.color());
-```
-
-1. meta
-    * Answers
-        * green
-        * Error
-        * undefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Intermediate
-    * Tags
-        * JavaScript
-2. meta end
-
-
-# Expert
+# Advanced
 
 
 ```
