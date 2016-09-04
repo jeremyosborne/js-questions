@@ -258,7 +258,63 @@ var f = function () {
 console.log(f()());",Practical,Intermediate,JavaScript,1 Minute,42,Y
 ,,,,,,Error,N
 ,,,,,,undefined,N
-38,"Disregarding whether or not this is a good practice, what is the value printed by console.log?
+38,"What is the value printed by console.log?
+
+var f = function (a, b, c) {
+    console.log(a, b, c)
+};
+f(1, 2);",Practical,Intermediate,JavaScript,1 Minute,"1, 2, undefined",Y
+,,,,,,"1, 2",N
+,,,,,,Error,N
+39,"What is the value printed by console.log?
+
+var f = function (a, b, c) {
+    console.log(a, b, c)
+};
+f(1, 2, 3, 4);",Practical,Intermediate,JavaScript,1 Minute,"1, 2, 3",Y
+,,,,,,"1, 2, 3, 4",N
+,,,,,,Error,N
+40,"What is the value printed by console.log?
+
+var f = function (g) {
+    return g(5, 4);
+};
+var g = function(n) {
+    console.log(n);
+};
+f(g);",Practical,Intermediate,JavaScript,1 Minute,5,Y
+,,,,,,"5, 4",N
+,,,,,,undefined,N
+,,,,,,Error,N
+41,"What is the value printed by console.log?
+
+var f = function (g) {
+    return function () {
+        return g(42);
+    };
+};
+var g = function (n) {
+    return n + 42;
+};
+var h = f(g);
+console.log(h());",Practical,Intermediate,JavaScript,2 Minutes,84,Y
+,,,,,,42,N
+,,,,,,undefined,N
+,,,,,,Error,N
+42,"What is the value printed by console.log?
+
+var f = function (g) {
+    g(42);
+};
+var g = function (n) {
+    return n + 42;
+};
+var h = f(g);
+console.log(h());",Practical,Intermediate,JavaScript,2 Minutes,Error,Y
+,,,,,,84,N
+,,,,,,42,N
+,,,,,,undefined,N
+43,"Disregarding whether or not this is a good practice, what is the value printed by console.log?
 
 Object.prototype._color = 'green';
 var Cat = function (color) {
@@ -271,7 +327,7 @@ var tom = new Cat();
 console.log(tom.color());",Practical,Intermediate,JavaScript,2 Minutes,green,Y
 ,,,,,,Error,N
 ,,,,,,undefined,N
-39,"What will be printed by console.log?
+44,"What will be printed by console.log?
 
 var Animal = function (name) {
     this.name = name || ""blah"";
@@ -290,7 +346,7 @@ console.log(c.speak());",Practical,Intermediate,JavaScript,2 Minutes,My name is:
 ,,,,,,My name is: blah,N
 ,,,,,,undefined,N
 ,,,,,,Error,N
-40,"What will be printed by console.log?
+45,"What will be printed by console.log?
 
 var Animal = function (name) {
     this.name = name || ""blah"";
@@ -312,7 +368,7 @@ console.log(c.speak());",Practical,Intermediate,JavaScript,2 Minutes,Tom says me
 ,,,,,,My name is: Tom,N
 ,,,,,,My name is: blah,N
 ,,,,,,undefined,N
-41,"What will be printed by console.log?
+46,"What will be printed by console.log?
 
 var Animal = function (name) {
     this.name = name || ""blah"";
@@ -332,7 +388,7 @@ console.log(c.speak());",Practical,Intermediate,JavaScript,2 Minutes,blah says m
 ,,,,,,My name is: Tom,N
 ,,,,,,My name is: blah,N
 ,,,,,,Tom says meow!,N
-42,"What will be printed by console.log?
+47,"What will be printed by console.log?
 
 var Animal = function (name) {
     this.name = name || ""blah"";
@@ -352,7 +408,7 @@ console.log(c.speak());",Practical,Intermediate,JavaScript,2 Minutes,My name is:
 ,,,,,,blah says meow!,N
 ,,,,,,My name is: Tom,N
 ,,,,,,Tom says meow!,N
-43,"What is the value of printed by console.log?
+48,"What is the value of printed by console.log?
 
 var x = 10;
 var f = function () {
@@ -363,7 +419,7 @@ console.log(x);",Practical,Intermediate,JavaScript,1 Minute,42,Y
 ,,,,,,10,N
 ,,,,,,undefined,N
 ,,,,,,Error,N
-44,"What is the value printed by console.log?
+49,"What is the value printed by console.log?
 
 var x = 10;
 var f = function () {
@@ -374,7 +430,7 @@ console.log(x);",Practical,Intermediate,JavaScript,1 Minute,10,Y
 ,,,,,,42,N
 ,,,,,,undefined,N
 ,,,,,,Error,N
-45,"What is the value printed by console.log when the code is run in the browser?
+50,"What is the value printed by console.log when the code is run in the browser?
 
 var x = 10;
 var f = function () {
@@ -385,7 +441,7 @@ f();",Practical,Intermediate,"JavaScript, Browser",1 Minute,10,Y
 ,,,,,,42,N
 ,,,,,,undefined,N
 ,,,,,,Error,N
-46,"What is the value printed by console.log when the code is run?
+51,"What is the value printed by console.log when the code is run?
 
 var x = 10;
 var f = function (x) {
@@ -397,7 +453,7 @@ console.log(x);",Practical,Intermediate,JavaScript,1 Minute,10,Y
 ,,,,,,42,N
 ,,,,,,undefined,N
 ,,,,,,Error,N
-47,"What is the value printed by console.log when the code is run?
+52,"What is the value printed by console.log when the code is run?
 
 var x = 10;
 var f = function () {
@@ -411,7 +467,7 @@ f();",Practical,Intermediate,JavaScript,2 Minutes,84,Y
 ,,,,,,42,N
 ,,,,,,10,N
 ,,,,,,undefined,N
-48,"What is the value printed by console.log when the code is run?
+53,"What is the value printed by console.log when the code is run?
 
 var x = {};
 var f = function (y) {
@@ -422,7 +478,7 @@ console.log(x.test)",Practical,Intermediate,JavaScript,1 Minute,42,Y
 ,,,,,,Error,N
 ,,,,,,undefined,N
 ,,,,,,null,N
-49,"What is the value printed by console.log when the code is run?
+54,"What is the value printed by console.log when the code is run?
 
 var x = {};
 var f = function (y) {
@@ -434,7 +490,7 @@ console.log(x.test)",Practical,Intermediate,JavaScript,1 Minute,undefined,Y
 ,,,,,,42,N
 ,,,,,,Error,N
 ,,,,,,null,N
-50,"What is the value printed by console.log when the code is run?
+55,"What is the value printed by console.log when the code is run?
 
 for (var i = 0; i < 10; i++) {
     /* pretend code exists here */
@@ -443,7 +499,7 @@ console.log(i)",Practical,Intermediate,JavaScript,1 Minute,10,Y
 ,,,,,,9,N
 ,,,,,,Error,N
 ,,,,,,undefined,N
-51,"What is the value printed by console.log when the code is run?
+56,"What is the value printed by console.log when the code is run?
 
 for (let i = 0; i < 10; i++) {
     /* pretend code exists here */
@@ -452,15 +508,15 @@ console.log(i)",Practical,Intermediate,JavaScript,1 Minute,Error,Y
 ,,,,,,0,N
 ,,,,,,10,N
 ,,,,,,undefined,N
-52,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
+57,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
 ,,,,,,Boolean,N
 ,,,,,,Undefined,N
 ,,,,,,Null,N
-53,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
+58,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
 ,,,,,,Array,N
 ,,,,,,Function,N
 ,,,,,,Error,N
-54,"What is the value printed by console.log?
+59,"What is the value printed by console.log?
 
 var x = [1, 2, 3];
 var y = x.slice(1);
@@ -469,7 +525,7 @@ console.log(y);",Practical,Intermediate,JavaScript,1 Minute,"[2, 3]",Y
 ,,,,,,"[1, 2, 3]",N
 ,,,,,,"[1, 4, 3]",N
 ,,,,,,"[4, 3]",N
-55,"What is the value printed by console.log?
+60,"What is the value printed by console.log?
 
 var x = [1, 2, 3];
 x.shift();
@@ -480,14 +536,14 @@ console.log(x);",Practical,Intermediate,JavaScript,1 Minute,"[0, 2, 4]",Y
 ,,,,,,"[1, 2, 3]",N
 ,,,,,,"[1, 3, 5]",N
 ,,,,,,"[0, 1, 2, 3, 4]",N
-56,"What is printed in the console output?
+61,"What is printed in the console output?
 
 var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 x.sort();
 console.log(x);",Practical,Intermediate,JavaScript,1 Minute,"[1, 10, 2, 3, 4, 5, 6, 7, 8, 9]",Y
 ,,,,,,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",N
 ,,,,,,"[10, 1, 2, 3, 4, 5, 6, 7, 8, 9]",N
-57,"What is the value printed by console.log?
+62,"What is the value printed by console.log?
 
 var x = {a: 10, b: 10};
 x.b += x.a;
@@ -497,62 +553,91 @@ console.log(x.b);",Practical,Intermediate,JavaScript,2 Minutes,30,Y
 ,,,,,,20,N
 ,,,,,,10,N
 ,,,,,,40,N
-58,"What is the value printed by console.log?
+63,"What is the value printed by console.log?
 
 var x = {a: 10, b: 10};
 console.log(x.toString());",Practical,Intermediate,JavaScript,2 Minutes,[object Object],Y
 ,,,,,,"""{a: 10, b: 10}""",N
 ,,,,,,"""10, 10""",N
 ,,,,,,Error,N
-59,"What is the value printed by console.log?
+64,"What is the value printed by console.log?
 
 var x = {a: 10, b: 10};
 console.log(x.toString());",Practical,Intermediate,JavaScript,2 Minutes,[object Object],Y
 ,,,,,,"""{a: 10, b: 10}""",N
 ,,,,,,"""10, 10""",N
 ,,,,,,Error,N
-60,"What is the value printed by console.log?
+65,"What is the value printed by console.log?
 
 var a = 42 + ""42"";
 console.log(a);",Practical,Intermediate,JavaScript,1 Minute,4242,Y
 ,,,,,,84,N
 ,,,,,,Error,N
 ,,,,,,42,N
-61,"What is the value printed by console.log?
+66,"What is the value printed by console.log?
 
 var a = 42 - ""42"";
 console.log(a);",Practical,Intermediate,JavaScript,1 Minute,0,Y
 ,,,,,,4242,N
 ,,,,,,Error,N
 ,,,,,,42,N
-62,"What is the value printed by console.log?
+67,"What is the value printed by console.log?
 
 console.log(null == undefined);",Practical,Intermediate,JavaScript,1 Minute,0,Y
 ,,,,,,4242,N
 ,,,,,,Error,N
 ,,,,,,42,N
-63,Which explanation is most correct about how '==' is different from '==='?,Practical,Intermediate,JavaScript,1 Minute,'===' checks value and type.,Y
+68,Which explanation is most correct about how '==' is different from '==='?,Practical,Intermediate,JavaScript,1 Minute,'===' checks value and type.,Y
 ,,,,,,'==' checks value and type.,N
 ,,,,,,'===' is not used in JavaScript.,N
-64,Which of the following will throw an error in JavaScript Strict Mode?,Practical,Intermediate,JavaScript,1 Minute,Assigning a value to an undeclared variable will throw an error.,Y
+69,Which of the following will throw an error in JavaScript Strict Mode?,Practical,Intermediate,JavaScript,1 Minute,Assigning a value to an undeclared variable will throw an error.,Y
 ,,,,,,Creating objects with new Object().,N
 ,,,,,,Accessing the arguments object.,N
-65,"What is printed to console.log?
+70,"What is printed to console.log?
 
 console.log(parseInt(""123.45""));",Practical,Intermediate,JavaScript,1 Minute,123,Y
 ,,,,,,123.45,N
 ,,,,,,undefined,N
-66,"What is printed to console.log?
+71,"What is printed to console.log?
 
 console.log(isNaN(""42""));",Practical,Intermediate,JavaScript,1 Minute,false,Y
 ,,,,,,true,N
-67,"What is printed to console.log?
+72,"What is printed to console.log?
 
 var s = ""hello how are you?"";
 s.replace(""hello"", ""mellow"");
 console.log(s);",Practical,Intermediate,JavaScript,1 Minute,hello how are you?,Y
 ,,,,,,mellow how are you?,N
-68,"What is output to the console when this code is run?
+73,"What is printed to console.log?
+
+var a = [1, 2, 3, 4];
+a = a.map(function (i) {
+    return i % 2;
+});
+console.log(a);",Practical,Intermediate,JavaScript,1 Minute,"[1, 0, 1, 0]",Y
+,,,,,,"[1, 3]",N
+,,,,,,"[1, 2, 3, 4]",N
+,,,,,,10,N
+74,"What is printed to console.log?
+
+var a = [1, 2, 3, 4];
+a = a.filter(function (i) {
+    return i % 2;
+});
+console.log(a);",Practical,Intermediate,JavaScript,1 Minute,"[1, 3]",Y
+,,,,,,"[1, 2, 3, 4]",N
+,,,,,,"[1, 0, 3, 0]",N
+,,,,,,10,N
+75,"What is printed to console.log?
+
+var a = [1, 2, 3, 4];
+a = a.reduce(function (a, b) {
+    return a + b;
+}, 1);
+console.log(a);",Practical,Intermediate,JavaScript,1 Minute,11,Y
+,,,,,,"[1, 2, 3, 4]",N
+,,,,,,10,N
+76,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -562,7 +647,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,3,Y
 ,,,,,,1,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-69,"What is output to the console when this code is run?
+77,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -572,7 +657,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,4,Y
 ,,,,,,3,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-70,"What is output to the console when this code is run?
+78,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;

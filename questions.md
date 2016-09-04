@@ -924,6 +924,147 @@ console.log(f()());
 2. meta end
 
 
+```
+What is the value printed by console.log?
+
+var f = function (a, b, c) {
+    console.log(a, b, c)
+};
+f(1, 2);
+```
+
+1. meta
+    * Answers
+        * 1, 2, undefined
+        * 1, 2
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function (a, b, c) {
+    console.log(a, b, c)
+};
+f(1, 2, 3, 4);
+```
+
+1. meta
+    * Answers
+        * 1, 2, 3
+        * 1, 2, 3, 4
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function (g) {
+    return g(5, 4);
+};
+var g = function(n) {
+    console.log(n);
+};
+f(g);
+```
+
+1. meta
+    * Answers
+        * 5
+        * 5, 4
+        * undefined
+        * Error
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function (g) {
+    return function () {
+        return g(42);
+    };
+};
+var g = function (n) {
+    return n + 42;
+};
+var h = f(g);
+console.log(h());
+```
+
+1. meta
+    * Answers
+        * 84
+        * 42
+        * undefined
+        * Error
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is the value printed by console.log?
+
+var f = function (g) {
+    g(42);
+};
+var g = function (n) {
+    return n + 42;
+};
+var h = f(g);
+console.log(h());
+```
+
+1. meta
+    * Answers
+        * Error
+        * 84
+        * 42
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
 ## Intermediate - Prototype and Inheritance
 
 ```
@@ -1726,6 +1867,86 @@ console.log(s);
     * Answers
         * hello how are you?
         * mellow how are you?
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var a = [1, 2, 3, 4];
+a = a.map(function (i) {
+    return i % 2;
+});
+console.log(a);
+```
+
+1. meta
+    * Answers
+        * [1, 0, 1, 0]
+        * [1, 3]
+        * [1, 2, 3, 4]
+        * 10
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var a = [1, 2, 3, 4];
+a = a.filter(function (i) {
+    return i % 2;
+});
+console.log(a);
+```
+
+1. meta
+    * Answers
+        * [1, 3]
+        * [1, 2, 3, 4]
+        * [1, 0, 3, 0]
+        * 10
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var a = [1, 2, 3, 4];
+a = a.reduce(function (a, b) {
+    return a + b;
+}, 1);
+console.log(a);
+```
+
+1. meta
+    * Answers
+        * 11
+        * [1, 2, 3, 4]
+        * 10
     * Time
         * 1 Minute
     * Category
