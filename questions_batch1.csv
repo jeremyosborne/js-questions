@@ -1,0 +1,130 @@
+#,Question,Category,Level,Tags,Time,Answer Choices,IsAnswer
+0,Which of the following is a reserved word used to declare variables?,Practical,Beginner,JavaScript,30 Seconds,var,Y
+,,,,,,integer,N
+,,,,,,str,N
+,,,,,,bool,N
+1,Which of the following is the reserved word used for defining a function?,Practical,Beginner,JavaScript,30 Seconds,function,Y
+,,,,,,def,N
+,,,,,,funct,N
+,,,,,,var,N
+2,Which of the following will return the type of an identifier?,Practical,Beginner,JavaScript,30 Seconds,typeof,Y
+,,,,,,enum,N
+,,,,,,type,N
+,,,,,,const,N
+3,Which of the following will not create an Object?,Practical,Beginner,JavaScript,30 Seconds,undefined,Y
+,,,,,,{},N
+,,,,,,new Object(),N
+,,,,,,Object.create(null),N
+4,Which of the following reserved words allow you to create a block scoped variable?,Practical,Beginner,JavaScript,30 Seconds,let,Y
+,,,,,,var,N
+,,,,,,int,N
+,,,,,,bool,N
+5,Which of the following statements is most correct?,Practical,Beginner,JavaScript,30 Seconds,JavaScript variables are dynamically typed.,Y
+,,,,,,JavaScript has no data types.,N
+,,,,,,JavaScript is compiled.,N
+,,,,,,JavaScript is not object oriented.,N
+6,What is the standard that governs the JavaScript language?,Practical,Beginner,JavaScript,30 Seconds,ECMAScript,Y
+,,,,,,Oracle,N
+,,,,,,Java,N
+,,,,,,PEP,N
+7,Which set of reserved words are not used for flow of control in JavaScript.,Practical,Beginner,JavaScript,30 Seconds,"if, elif, else",Y
+,,,,,,"if, else if, else",N
+,,,,,,"for, continue, break",N
+,,,,,,"switch, case",N
+8,Which function is used to import modules in Node.js?,Practical,Beginner,"JavaScript, Node.js",30 Seconds,require,Y
+,,,,,,port,N
+,,,,,,retrieve,N
+,,,,,,find,N
+9,"In the browser, what object is consider the global object?",Practical,Beginner,JavaScript,30 Seconds,window,Y
+,,,,,,document,N
+,,,,,,global,N
+,,,,,,page,N
+10,"In the browser, which of the following will create a new variable scope?",Practical,Beginner,JavaScript,30 Seconds,function block,Y
+,,,,,,if block,N
+,,,,,,for block,N
+,,,,,,while block,N
+11,Which of the following provides inheritance in JavaScript?,Practical,Beginner,JavaScript,30 Seconds,function prototype,Y
+,,,,,,templates,N
+,,,,,,interfaces,N
+,,,,,,generics,N
+12,"When referring to a 'callback' in JavaScript, which is the most correct answer?",Practical,Beginner,JavaScript,30 Seconds,A function passed as an argument to be called later.,Y
+,,,,,,An object passed as an argument.,N
+,,,,,,A string passed as an argument to reference a method to be called.,N
+,,,,,,An undefined value.,N
+13,What keyword in JavaScript is designed to create instances of types?,Practical,Beginner,JavaScript,30 Seconds,new,Y
+,,,,,,old,N
+,,,,,,free,N
+,,,,,,create,N
+14,"In the browser, which of the following is the best answer for the construct used to create 'modules of code'.",Practical,Beginner,"JavaScript, Browser",30 Seconds,function,Y
+,,,,,,object literals,N
+,,,,,,arrays,N
+,,,,,,strings,N
+15,"When the following code is run, what is the output?
+
+var x = 42;
+x = ""100"";
+console.log(x);",Practical,Beginner,JavaScript,30 Seconds,100,Y
+,,,,,,42,N
+,,,,,,"Error, can't change variable type",N
+16,What is the de facto developer/debugging object in JavaScript?,Practical,Beginner,JavaScript,30 Seconds,console,Y
+,,,,,,ast,N
+,,,,,,print,N
+,,,,,,log,N
+17,What does JSON stand for?,Practical,Beginner,"JavaScript, JSON",30 Seconds,JavaScript Object Notation,Y
+,,,,,,JScript Object Notation,N
+,,,,,,JavaScript Object Notary,N
+,,,,,,Java Serialization Object Notation,N
+18,What is the de facto method used to return an object as a string?,Practical,Beginner,JavaScript,30 Seconds,.toString(),Y
+,,,,,,.repr(),N
+,,,,,,.str(),N
+,,,,,,.serialize(),N
+19,What is the global object designed to be used to convert objects to JSON?,Practical,Beginner,JavaScript,30 Seconds,JSON,Y
+,,,,,,Marshal,N
+,,,,,,String,N
+,,,,,,Send,N
+20,What is a statement that could be used to describe closure in JavaScript?,Theory,Intermediate,JavaScript,1 Minuteute,Functions defined within another function have access to variables declared in the outer scope.,Y
+,,,,,,Functions have access to all variables defined in all other functions.,N
+,,,,,,Functions return a single value.,N
+,,,,,,Functions are call by object reference.,N
+21,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
+,,,,,,Boolean,N
+,,,,,,Undefined,N
+,,,,,,Null,N
+22,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
+,,,,,,Array,N
+,,,,,,Function,N
+,,,,,,Error,N
+23,Which of the following methods is not a function method?,Practical,Intermediate,JavaScript,30 Seconds,split,Y
+,,,,,,apply,N
+,,,,,,call,N
+,,,,,,bind,N
+24,"What is output to the console when this code is run?
+
+var f = function(a) {
+    return a.length;
+}
+var val = f.call(null, [1, 2, 3]);
+console.log(val);",Practical,Advanced,JavaScript,1 Minute,3,Y
+,,,,,,1,N
+,,,,,,This code produces an error,N
+,,,,,,undefined,N
+25,"What is output to the console when this code is run?
+
+var f = function(a) {
+    return a.length;
+}
+var val = f.apply(null, [""abcd"", ""123"", ""456""]);
+console.log(val);",Practical,Advanced,JavaScript,1 Minute,4,Y
+,,,,,,3,N
+,,,,,,This code produces an error,N
+,,,,,,undefined,N
+26,"What is output to the console when this code is run?
+
+var f = function(a) {
+    return a.length;
+}
+var val = f.bind(null, [""abcd"", ""123"", ""456""])();
+console.log(val);",Practical,Advanced,JavaScript,1 Minute,3,Y
+,,,,,,4,N
+,,,,,,This code produces an error,N
+,,,,,,undefined,N
