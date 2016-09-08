@@ -1,0 +1,196 @@
+#,Question,Category,Level,Tags,Time,Answer Choices,IsAnswer
+0,"What is printed to console.log?
+
+var s = ""hello"";
+console.log(s.split());",Practical,Intermediate,JavaScript,1 Minute,"[ ""hello"" ]",Y
+,,,,,,"[ ""h"", ""e"", ""l"", ""l"", ""o"" ]",N
+,,,,,,hello,N
+,,,,,,Error is thrown,N
+1,"What is printed to console.log?
+
+var p = {
+    i: 42
+};
+var o = Object.create(p, {
+    i: {
+        value: 24
+    }
+});
+console.log(o.i);",Practical,Intermediate,JavaScript,1 Minute,42,Y
+,,,,,,24,N
+,,,,,,undefined,N
+,,,,,,Error is thrown,N
+2,"What is printed to console.log?
+
+Object.prototype.test = 42;
+var o = { i: 84 };
+for (var p in o) {
+    console.log(p, o[p]);
+}",Practical,Intermediate,JavaScript,1 Minute,i 84 and test 42,Y
+,,,,,,i 84,N
+,,,,,,test 42,N
+3,"What is printed to console.log?
+
+var o = { i: 84 };
+Object.freeze(o);
+o.i = 42;
+console.log(o.i);",Practical,Intermediate,JavaScript,1 Minute,84,Y
+,,,,,,42,N
+,,,,,,Error is thrown,N
+,,,,,,undefined,N
+4,"For the implicit arguments object available within function calls, what is one correct way to convert the array-like arguments object into a real Array instance?",Practical,Intermediate,JavaScript,1 Minute,Array.prototype.slice.call(arguments);,Y
+,,,,,,Array.slice(arguments);,N
+,,,,,,Array.prototype.slice(arguments);,N
+,,,,,,arguments.slice();,N
+5,"Which of the answers is equivalent to the following:
+
+var f = function (i) {
+    return i;
+};",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,var f = i => i;,Y
+,,,,,,var f = i > i;,N
+,,,,,,var f = i -> i;,N
+,,,,,,var f = (i) <= i;,N
+6,"Which of the answers is equivalent to the following:
+
+class Animal {
+    constructor(i) {
+        this.i = i;
+    }
+}",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,var Animal = function (i) { this.i = i; };,Y
+,,,,,,var Animal = function (i) { var i = i; };,N
+,,,,,,var Animal = function (i) { this.i = i; return i; };,N
+,,,,,,var Animal = function (i) { this.i; };,N
+7,"What is printed by console.log?
+
+var f = function (x, ...y) {
+  console.log(y);
+}
+f(1, 2, ""cat"", 3)",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"[2, ""cat"", 3]",Y
+,,,,,,"[1, 2, 3]",N
+,,,,,,3,N
+,,,,,,"[1, 2, ""cat"", 3]",N
+8,"What is printed by console.log?
+
+var f = function () {
+    const x = 42;
+    var a = 24;
+    x = 100;
+    console.log(a, x);
+};",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"Error thrown, console.log is not reached",Y
+,,,,,,"24, 100",N
+,,,,,,"24, 42",N
+,,,,,,"24, undefined",N
+9,"What will be printed by console.log?
+
+var f = function*() {
+    for (var i = 0; i < 10; i++) {
+        yield i;
+    }
+};
+
+var a = [];
+for (var i of f()) {
+    a.push(i);
+}
+console.log(a);",Practical,Intermediate,"JavaScript, ECMAScript 6",2 Minutes,"[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]",Y
+,,,,,,"[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]",N
+,,,,,,[ 0 ],N
+,,,,,,9,N
+10,"What is printed to console.log?
+
+var a = ""abc"";
+for (let i of a) {
+    console.log(i);
+    break;
+}",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,a,Y
+,,,,,,abc,N
+,,,,,,Error is thrown.,N
+11,"Comparing Node.js to ECMAScript 6 modules, which of the answers is equivalent to the following in ECMAScript 6 specific syntax?
+
+module.exports.test = function (i) { return i; };",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,export var test = function (i) { return i; };,Y
+,,,,,,exports var test = function (i) { return i; };,N
+,,,,,,exports.test = function (i) { return i; };,N
+12,"What will be printed to console.log?
+
+var s = new Set();
+s.add(42);
+s.add(""42"");
+s.add(42);
+console.log(s.size);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,2,Y
+,,,,,,3,N
+,,,,,,1,N
+,,,,,,undefined,N
+13,"What will be printed to console.log?
+
+var m = new Map();
+m.set(42, ""Hello"");
+m.set(""42"", ""World"");
+console.log(m.get(42), m.get(""42""));",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,Hello World,Y
+,,,,,,Hello Hello,N
+,,,,,,World World,N
+14,"What will be printed to console.log?
+
+console.log(isNaN(""abc""), Number.isNaN(""abc""));",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"true, false",Y
+,,,,,,"true, true",N
+,,,,,,"false, false",N
+,,,,,,"false, true",N
+15,"What will be printed to console.log?
+
+var o = {
+    i: 42
+};
+var p = {};
+Object.assign(p, o);
+console.log(o.i, p.i);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"42, 42",Y
+,,,,,,"42, undefined",N
+,,,,,,"undefined, undefined",N
+,,,,,,Error is thrown.,N
+16,"Starting in ECMAScript6, which of the answers is the equivalent of the following?
+
+var f = function (a, b) {
+    a = a || 42;
+    b = b || 34;
+    return a + b;
+};",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"var f = function (a=42, b=34) { return a + b };",Y
+,,,,,,"var f = function (a (42), b (34)) { return a + b };",N
+,,,,,,"var f = function (a default 42, b default 34) { return a + b };",N
+,,,,,,Default parameter values are not a feature of ECMAScript 6.,N
+17,"What is printed in console.log?
+
+var s = ""Hello"";
+console.log([...s]);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"[ 'H', 'e', 'l', 'l', 'o' ]",Y
+,,,,,,Hello,N
+,,,,,,[ 'Hello' ],N
+,,,,,,Error is thrown.,N
+18,"What is printed in console.log?
+
+var o = {
+    i: 42,
+    j: 24
+};
+var { i, j } = o;
+console.log(j, i);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"24, 42",Y
+,,,,,,"42, 24",N
+,,,,,,"undefined, undefined",N
+,,,,,,Error is thrown.,N
+19,"What is printed in console.log?
+
+var o = {
+    i: 42,
+    j: 24
+};
+var { i: a, j: b } = o;
+console.log(b, a);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"24, 42",Y
+,,,,,,"42, 24",N
+,,,,,,"undefined, undefined",N
+,,,,,,Error is thrown.,N
+20,"What is printed to console.log?
+
+var f = function([a, b, c]) {
+    return a + b + c + 100;
+};
+var a = [1, 2, 3];
+console.log(f(a));",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,106,Y
+,,,,,,Error is thrown.,N
+,,,,,,undefined,N
+,,,,,,NaN,N
