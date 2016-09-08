@@ -42,7 +42,19 @@ console.log(o.i);",Practical,Intermediate,JavaScript,1 Minute,84,Y
 ,,,,,,Array.slice(arguments);,N
 ,,,,,,Array.prototype.slice(arguments);,N
 ,,,,,,arguments.slice();,N
-5,"Which of the answers is equivalent to the following:
+5,"What is printed to console.log?
+
+var o = {i: 42, j: 84, k: 100};
+var k = Object.keys(o);
+var total = 0;
+for (var i = 0; i < k.length; i++) {
+    total += o[k[i]];
+}
+console.log(total);",Practical,Intermediate,JavaScript,1 Minute,226,Y
+,,,,,,ijk,N
+,,,,,,ijk226,N
+,,,,,,226,N
+6,"Which of the answers is equivalent to the following:
 
 var f = function (i) {
     return i;
@@ -50,7 +62,18 @@ var f = function (i) {
 ,,,,,,var f = i > i;,N
 ,,,,,,var f = i -> i;,N
 ,,,,,,var f = (i) <= i;,N
-6,"Which of the answers is equivalent to the following:
+7,"What is printed to console.log?
+
+var Animal = function (name) {
+    var speak = () => name || ""Bob""
+    this.speak = speak;
+}
+var cat = new Animal(""Tom"");
+console.log(cat.speak());",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,Tom,Y
+,,,,,,undefined,N
+,,,,,,Bob,N
+,,,,,,Error is thrown,N
+8,"Which of the answers is equivalent to the following:
 
 class Animal {
     constructor(i) {
@@ -60,7 +83,22 @@ class Animal {
 ,,,,,,var Animal = function (i) { var i = i; };,N
 ,,,,,,var Animal = function (i) { this.i = i; return i; };,N
 ,,,,,,var Animal = function (i) { this.i; };,N
-7,"What is printed by console.log?
+9,"What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || ""Fido"";
+    }
+    toString() {
+        return ""My name is: "" + this.name;
+    }
+}
+var cat = new Animal();
+console.log("""" + cat);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,My name is: Fido,Y
+,,,,,,[object Object],N
+,,,,,,My name is: undefined,N
+,,,,,,Error is thrown,N
+10,"What is printed by console.log?
 
 var f = function (x, ...y) {
   console.log(y);
@@ -69,7 +107,7 @@ f(1, 2, ""cat"", 3)",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,
 ,,,,,,"[1, 2, 3]",N
 ,,,,,,3,N
 ,,,,,,"[1, 2, ""cat"", 3]",N
-8,"What is printed by console.log?
+11,"What is printed by console.log?
 
 var f = function () {
     const x = 42;
@@ -80,7 +118,7 @@ var f = function () {
 ,,,,,,"24, 100",N
 ,,,,,,"24, 42",N
 ,,,,,,"24, undefined",N
-9,"What will be printed by console.log?
+12,"What will be printed by console.log?
 
 var f = function*() {
     for (var i = 0; i < 10; i++) {
@@ -96,7 +134,7 @@ console.log(a);",Practical,Intermediate,"JavaScript, ECMAScript 6",2 Minutes,"[ 
 ,,,,,,"[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]",N
 ,,,,,,[ 0 ],N
 ,,,,,,9,N
-10,"What is printed to console.log?
+13,"What is printed to console.log?
 
 var a = ""abc"";
 for (let i of a) {
@@ -105,12 +143,12 @@ for (let i of a) {
 }",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,a,Y
 ,,,,,,abc,N
 ,,,,,,Error is thrown.,N
-11,"Comparing Node.js to ECMAScript 6 modules, which of the answers is equivalent to the following in ECMAScript 6 specific syntax?
+14,"Comparing Node.js to ECMAScript 6 modules, which of the answers is equivalent to the following in ECMAScript 6 specific syntax?
 
 module.exports.test = function (i) { return i; };",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,export var test = function (i) { return i; };,Y
 ,,,,,,exports var test = function (i) { return i; };,N
 ,,,,,,exports.test = function (i) { return i; };,N
-12,"What will be printed to console.log?
+15,"What will be printed to console.log?
 
 var s = new Set();
 s.add(42);
@@ -120,7 +158,7 @@ console.log(s.size);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute
 ,,,,,,3,N
 ,,,,,,1,N
 ,,,,,,undefined,N
-13,"What will be printed to console.log?
+16,"What will be printed to console.log?
 
 var m = new Map();
 m.set(42, ""Hello"");
@@ -128,13 +166,13 @@ m.set(""42"", ""World"");
 console.log(m.get(42), m.get(""42""));",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,Hello World,Y
 ,,,,,,Hello Hello,N
 ,,,,,,World World,N
-14,"What will be printed to console.log?
+17,"What will be printed to console.log?
 
 console.log(isNaN(""abc""), Number.isNaN(""abc""));",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"true, false",Y
 ,,,,,,"true, true",N
 ,,,,,,"false, false",N
 ,,,,,,"false, true",N
-15,"What will be printed to console.log?
+18,"What will be printed to console.log?
 
 var o = {
     i: 42
@@ -145,7 +183,7 @@ console.log(o.i, p.i);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minu
 ,,,,,,"42, undefined",N
 ,,,,,,"undefined, undefined",N
 ,,,,,,Error is thrown.,N
-16,"Starting in ECMAScript6, which of the answers is the equivalent of the following?
+19,"Starting in ECMAScript6, which of the answers is the equivalent of the following?
 
 var f = function (a, b) {
     a = a || 42;
@@ -155,14 +193,14 @@ var f = function (a, b) {
 ,,,,,,"var f = function (a (42), b (34)) { return a + b };",N
 ,,,,,,"var f = function (a default 42, b default 34) { return a + b };",N
 ,,,,,,Default parameter values are not a feature of ECMAScript 6.,N
-17,"What is printed in console.log?
+20,"What is printed in console.log?
 
 var s = ""Hello"";
 console.log([...s]);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"[ 'H', 'e', 'l', 'l', 'o' ]",Y
 ,,,,,,Hello,N
 ,,,,,,[ 'Hello' ],N
 ,,,,,,Error is thrown.,N
-18,"What is printed in console.log?
+21,"What is printed in console.log?
 
 var o = {
     i: 42,
@@ -173,7 +211,7 @@ console.log(j, i);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"
 ,,,,,,"42, 24",N
 ,,,,,,"undefined, undefined",N
 ,,,,,,Error is thrown.,N
-19,"What is printed in console.log?
+22,"What is printed in console.log?
 
 var o = {
     i: 42,
@@ -184,7 +222,7 @@ console.log(b, a);",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,"
 ,,,,,,"42, 24",N
 ,,,,,,"undefined, undefined",N
 ,,,,,,Error is thrown.,N
-20,"What is printed to console.log?
+23,"What is printed to console.log?
 
 var f = function([a, b, c]) {
     return a + b + c + 100;

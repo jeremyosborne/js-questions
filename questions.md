@@ -131,7 +131,39 @@ For the implicit arguments object available within function calls, what is one c
 2. meta end
 
 
+```
+What is printed to console.log?
+
+var o = {i: 42, j: 84, k: 100};
+var k = Object.keys(o);
+var total = 0;
+for (var i = 0; i < k.length; i++) {
+    total += o[k[i]];
+}
+console.log(total);
+```
+
+1. meta
+    * Answers
+        * 226
+        * ijk
+        * ijk226
+        * 226
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
 ## Intermediate - ECMAScript 6
+
+
 
 ```
 Which of the answers is equivalent to the following:
@@ -147,6 +179,35 @@ var f = function (i) {
         * var f = i > i;
         * var f = i -> i;
         * var f = (i) <= i;
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    var speak = () => name || "Bob"
+    this.speak = speak;
+}
+var cat = new Animal("Tom");
+console.log(cat.speak());
+```
+
+1. meta
+    * Answers
+        * Tom
+        * undefined
+        * Bob
+        * Error is thrown
     * Time
         * 1 Minute
     * Category
@@ -186,6 +247,38 @@ class Animal {
         * ECMAScript 6
 2. meta end
 
+
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || "Fido";
+    }
+    toString() {
+        return "My name is: " + this.name;
+    }
+}
+var cat = new Animal();
+console.log("" + cat);
+```
+
+1. meta
+    * Answers
+        * My name is: Fido
+        * [object Object]
+        * My name is: undefined
+        * Error is thrown
+    * Time
+        * 1 Minute
+    * Category
+        * Practical
+    * Level
+        * Intermediate
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
 
 
 ```
