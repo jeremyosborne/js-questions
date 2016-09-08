@@ -666,3 +666,50 @@ console.log(f(a));
         * JavaScript
         * ECMAScript 6
 2. meta end
+
+
+
+# Advanced
+
+## Advanced - Async
+
+## Advanced - ECMAScript 6
+
+## Advanced - Functions
+
+## Advanced - Scope
+
+```
+What is printed to console.log?
+
+var f = function () {
+    if (!console) {
+        var console = {};
+        console.log = function () {
+            return 42;
+        }
+    }
+    console.log(100);
+};
+f();
+```
+
+1. meta
+    * Answers
+        * undefined
+        * 100
+        * 42
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+## Advanced - Standard
+
+## Advanced - Types: Primitive and Native

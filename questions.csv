@@ -232,3 +232,18 @@ console.log(f(a));",Practical,Intermediate,"JavaScript, ECMAScript 6",1 Minute,1
 ,,,,,,Error is thrown.,N
 ,,,,,,undefined,N
 ,,,,,,NaN,N
+24,"What is printed to console.log?
+
+var f = function () {
+    if (!console) {
+        var console = {};
+        console.log = function () {
+            return 42;
+        }
+    }
+    console.log(100);
+};
+f();",Practical,Advanced,JavaScript,2 Minutes,undefined,Y
+,,,,,,100,N
+,,,,,,42,N
+,,,,,,Error is thrown,N
