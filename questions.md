@@ -671,13 +671,372 @@ console.log(f(a));
 
 # Advanced
 
+
+
 ## Advanced - Async
+
+
+```
+What is printed to console.log?
+
+(function() {
+    console.log(1);
+    setTimeout(function(){console.log(2)}, 1000);
+    setTimeout(function(){console.log(3)}, 0);
+    console.log(4);
+})();
+```
+
+1. meta
+    * Answers
+        * 1 then 4 then 3 then 2
+        * 1 then 3 then 4 then 2
+        * 1 then 2 then 3 then 4
+        * 1 then 3 then 2 then 4
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+(function() {
+    var i = 0;
+    var id = setTimeout(function () {
+        i += 1;
+        if (i <= 5) {
+            setTimeout(arguments.callee, 10);
+        }
+    }, 10);
+    console.log(i);
+})();
+```
+
+1. meta
+    * Answers
+        * 0
+        * 6
+        * 5
+        * Error is thrown
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (color) {
+    this.color = color || "Brown";
+    this.speak = function () {
+        console.log(this.color);
+    };
+};
+var dog = new Animal("Black");
+setTimeout(dog.speak, 10);
+```
+
+1. meta
+    * Answers
+        * undefined
+        * Brown
+        * Black
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var n = 24;
+var p = new Promise(function (resolve, reject) {
+    resolve(100);
+});
+p.then(function (i) {
+    n = i;
+    return 42;
+}).then(function (i) {
+    n = i;
+    throw new Error();
+}).catch(function () {
+    console.log(n);
+});
+console.log(n);
+```
+
+1. meta
+    * Answers
+        * 24 then 42
+        * 24 then 100
+        * 42 then 24
+        * 100 then 24
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var n = 1;
+var pgen = function () {
+    n += 1;
+    return Promise.resolve(n);
+};
+Promise.all([pgen(), pgen(), pgen()])
+.then(function (answers) {
+    console.log(answers[0], answers[1], answers[2]);
+});
+```
+
+1. meta
+    * Answers
+        * 2, 3, 4
+        * 0, 1, 2
+        * 2, 1, 0
+        * 1, 2, 3
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+Promise.all([Promise.resolve(1), Promise.reject(new Error("Error!")), Promise.resolve(3)])
+.then(function (answers) {
+    console.log(answers[0], answers[1], answers[2]);
+})
+.catch(function (e) {
+    console.log(e.message);
+});
+```
+
+1. meta
+    * Answers
+        * Error!
+        * 1 Error! 3
+        * 1, 3 then Error!
+        * 1, 3
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
 
 ## Advanced - ECMAScript 6
 
+
+
 ## Advanced - Functions
 
+
+```
+What is printed to console.log?
+
+var g = (function f(f){
+   return f;
+})(function(){ return 42; });
+console.log(g(84));
+```
+
+1. meta
+    * Answers
+        * 42
+        * 84
+        * undefined
+        * Error is thrown
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var wrap = function (f) {
+    return function () {
+        return 42 + f();
+    };
+};
+var f = function () {
+    return 42;
+};
+f = wrap(f);
+console.log(f(100));
+```
+
+1. meta
+    * Answers
+        * 84
+        * 42
+        * 184
+        * 100
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var wrap = function (f) {
+    return function () {
+        var args = Array.prototype.slice.call(arguments);
+        args = args.reverse();
+        return f.apply(null, args);
+    };
+};
+var f = function (a, b, c) {
+    return a * b + c;
+};
+f = wrap(f);
+console.log(f(1, 2, 3));
+```
+
+1. meta
+    * Answers
+        * 7
+        * 5
+        * 6
+        * 2
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var f = function () {
+    return this.name;
+};
+
+var o = {
+    name: "Mo"
+};
+
+var o2 = {
+    name: "Mo Jr."
+};
+
+var g = f.bind(o);
+o2.name = g;
+console.log(o2.name());
+```
+
+1. meta
+    * Answers
+        * Mo
+        * Mo Jr.
+        * undefined
+        * Error is thrown
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var f = function (a, b) {
+    return this.name + " " + a + " " + b;
+};
+
+var o = {
+    name: "Mo"
+};
+
+var g = f.bind(o, "says", "hi");
+console.log(g());
+```
+
+1. meta
+    * Answers
+        * Mo says hi
+        * Mo undefined undefined
+        * Mo
+        * Error is thrown
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
 ## Advanced - Scope
+
 
 ```
 What is printed to console.log?
@@ -710,6 +1069,454 @@ f();
         * JavaScript
 2. meta end
 
+
+```
+What is printed to console.log?
+
+var f = function (i) {
+    return function (i) {
+        return i;
+    };
+};
+
+var g = f(42);
+console.log(g(84));
+```
+
+1. meta
+    * Answers
+        * 84
+        * 42
+        * undefined
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Fido";
+    this.speak = () => this.name;
+};
+
+var dog = new Animal();
+
+var otherDog = {
+    name: "Not Fido",
+    speak: dog.speak
+};
+console.log(otherDog.speak());
+```
+
+1. meta
+    * Answers
+        * Fido
+        * Not Fido
+        * undefined
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var x = 42;
+(function () {
+    var x = 24;
+    var f = function () {
+        x = 84;
+    };
+    (function () {
+        f();
+        console.log(x);
+    })();
+})();
+console.log(x);
+```
+
+1. meta
+    * Answers
+        * 84 then 42
+        * 42 then 84
+        * 42 then 42
+        * 24 then 42
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+(function () {
+    for (var i = 0; i < 10; i++) {
+        var a = i;
+    }
+    console.log(i);
+})();
+```
+
+1. meta
+    * Answers
+        * 10
+        * 0
+        * Error is thrown
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
 ## Advanced - Standard
 
+
+
+```
+What is printed to console.log?
+
+var n = null;
+var u = undefined;
+var f = function () {};
+console.log(typeof n, typeof u, typeof f);
+```
+
+1. meta
+    * Answers
+        * object undefined function
+        * null undefined function
+        * object undefined object
+        * null object function
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Assuming a browser environment, what is printed to console.log?
+
+window.onload = function () {
+    console.log(42);
+};
+var ev1 = function () {
+    console.log(84);
+};
+window.addEventListener("load", ev1);
+```
+
+1. meta
+    * Answers
+        * 42, 84
+        * 42
+        * 84
+        * 84, 42
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Assuming a browser environment, what is printed to console.log?
+
+window.onload = function () {
+    console.log(42);
+};
+var ev1 = function () {
+    this.removeEventListener("load", ev2);
+};
+var ev2 = function () {
+    console.log(84);
+}
+window.addEventListener("load", ev1);
+window.addEventListener("load", ev2);
+```
+
+1. meta
+    * Answers
+        * 42
+        * 42, 84
+        * 84
+        * 84, 42
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
 ## Advanced - Types: Primitive and Native
+
+
+```
+What is printed to console.log?
+
+var i = 42;
+var j = NaN;
+var k = 84;
+var s = (function () {
+    if (j > 0) {
+        return i + j + k;
+    } else {
+        return i + k;
+    }
+})();
+console.log(s);
+```
+
+1. meta
+    * Answers
+        * 126
+        * 42NaN84
+        * 4284
+        * NaN
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Fido";
+};
+var methods = {
+    speak: function () {
+        return this.name || "Cat";
+    }
+};
+var cat = new Animal("Dog");
+for (var m in methods) {
+    cat[m] = methods[m];
+}
+console.log(cat.speak());
+```
+
+1. meta
+    * Answers
+        * Dog
+        * Cat
+        * Fido
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Fido";
+};
+Animal.prototype.speak = function () {
+    return this.name;
+};
+
+var Cat = function (name) {
+    Animal.call(this, name);
+    name = name || "Gato";
+};
+Cat.prototype = new Animal();
+
+var cat = new Cat("Red");
+console.log(cat.speak());
+```
+
+1. meta
+    * Answers
+        * Red
+        * Gato
+        * Fido
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Fido";
+};
+Animal.prototype.speak = function () {
+    return this.name;
+};
+
+var Cat = function (name) {
+    name = name || "Gato";
+};
+Cat.prototype = new Animal();
+
+var cat = new Cat("Red");
+console.log(cat.speak());
+```
+
+1. meta
+    * Answers
+        * Fido
+        * Gato
+        * Red
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var speech = function () {
+    var args = Array.prototype.slice.call(arguments);
+    var words = args.map(function (w, i) {
+        return i % 2 === 0 ? "CENSORED" : w;
+    });
+    return words.join(" ");
+};
+console.log(speech("Hello", "world", "what's", "up?"));
+```
+
+1. meta
+    * Answers
+        * CENSORED world CENSORED up?
+        * Hello CENSORED what's CENSORED
+        * Hello world what's up?
+        * undefined undefined undefined undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var speech = function () {
+    var args = Array.prototype.slice.call(arguments);
+    var words = args.filter(function (w, i) {
+        return i % 2;
+    });
+    return words.join(" ");
+};
+console.log(speech("Hello", "world", "what's", "up?"));
+```
+
+1. meta
+    * Answers
+        * world up?
+        * Hello what's
+        * Hello world what's up?
+        * Hello world
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Assuming a browser environment, what is printed to console.log?
+
+var Animal = function () {
+    this.name = "Fido";
+};
+var dog = Animal();
+console.log(window.name, dog);
+```
+
+1. meta
+    * Answers
+        * Fido undefined
+        * undefined undefined
+        * undefined Fido
+        * Error
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
