@@ -296,6 +296,8 @@ p.then(function (o) {
 
 
 ```
+What is printed to console.log?
+
 var janeGenerator = function () {
     var p = new Promise(function (resolve, reject) {
         setTimeout(function () {
@@ -351,8 +353,239 @@ janeGenerator().then(function (o) {
 ## Advanced - ECMAScript 6
 
 
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || "Frida";
+    }
+    speak() {
+        return this.name;
+    }
+}
+class Cat extends Animal {
+    speak() {
+        return super.speak() + " says meow!";
+    }
+}
+var k = new Cat("Khalo");
+console.log(k.speak());
+```
+
+1. meta
+    * Answers
+        * Kahlo says meow!
+        * Frida says meow!
+        * undefined says meow!
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || "Frida";
+    }
+    speak() {
+        return this.name;
+    }
+}
+class Cat extends Animal {
+    speak() {
+        return super.speak() + " says meow!";
+    }
+}
+var k = new Cat("Khalo");
+k.speak = function () {
+    return super.speak() + " says woof!";
+};
+console.log(k.speak());
+```
+
+1. meta
+    * Answers
+        * Error is thrown
+        * Kahlo says meow!
+        * Kahlo says woof!
+        * Frida says woof!
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || "Frida";
+    }
+    speak() {
+        return this.name;
+    }
+}
+class Cat extends Animal {
+    speak() {
+        return super.speak() + " says meow!";
+    }
+}
+Cat.prototype.speak = function () {
+    return Animal.prototype.speak.call(this) + " says woof!";
+};
+var k = new Cat("Khalo");
+console.log(k.speak());
+```
+
+1. meta
+    * Answers
+        * Kahlo says woof!
+        * Kahlo says meow!
+        * Frida says woof!
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || "Frida";
+    }
+    speak() {
+        return this.name;
+    }
+}
+class Cat extends Animal {
+    speak() {
+        return super.speak() + " says meow!";
+    }
+}
+class ThunderCat extends Cat {
+    speak() {
+        return super.speak() + " says THUNDER THUNDER THUNDER!";
+    }
+}
+var k = new ThunderCat("Khalo");
+console.log(k.speak());
+```
+
+1. meta
+    * Answers
+        * Khalo says meow! says THUNDER THUNDER THUNDER!
+        * Kahlo says meow!
+        * Kahlo says THUNDER THUNDER THUNDER!
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this.name = name || "Frida";
+    }
+    speak() {
+        return this.name;
+    }
+}
+class Cat extends Animal {
+    speak() {
+        return super.speak() + " says meow!";
+    }
+}
+class ThunderCat extends Cat {
+    speak() {
+        return super.speak() + " says THUNDER THUNDER THUNDER!";
+    }
+}
+var k = new ThunderCat("Khalo");
+console.log(k instanceof ThunderCat,
+    k instanceof Cat,
+    k instanceof Animal,
+    k instanceof Object,
+    k instanceof Function);
+```
+
+1. meta
+    * Answers
+        * true true true true false
+        * true true true true true
+        * true false false false false
+        * true false false true false
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
 
 ## Advanced - Functions
+
+```
+
+```
+
+1. meta
+    * Answers
+        *
+        *
+        *
+        *
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
 
 
 
