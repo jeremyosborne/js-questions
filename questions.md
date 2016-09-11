@@ -350,7 +350,94 @@ janeGenerator().then(function (o) {
 2. meta end
 
 
+
+## Advanced - Browser
+
+
+
+```
+Assuming operation in a browser, a standardized and dev friendly API, and a click is made to `#button` in the HTML, what is printed to console.log?
+
+<html>
+    <head>
+        <title>Example<title>
+    </head>
+    <body>
+        <div>
+            <button id="button">Click</button>
+        </div>
+    <script>
+document.body.addEventListener("click", function(e) {
+    console.log(e.target.tagName);
+});
+    </script>
+    </body>
+</html>    
+```
+
+1. meta
+    * Answers
+        * BUTTON
+        * DIV
+        * BODY
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * Browser
+2. meta end
+
+
+```
+Assuming operation in a browser, a standardized and dev friendly API, and a click is made to `#button` in the HTML, what is printed to console.log?
+
+<html>
+    <head>
+        <title>Example<title>
+    </head>
+    <body>
+        <div>
+            <button id="button">Click</button>
+        </div>
+    <script>
+document.body.addEventListener("click", function (e) {
+    console.log(e.target.tagName);
+});
+document.querySelector("#button").addEventListener("click", function (e) {
+    e.stopPropagation();
+    console.log(e.target.tagName);
+});
+    </script>
+    </body>
+</html>    
+```
+
+1. meta
+    * Answers
+        * BUTTON
+        * BUTTON BUTTON
+        * BUTTON BODY
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * Browser
+2. meta end
+
+
+
 ## Advanced - ECMAScript 6
+
 
 
 ```
@@ -564,6 +651,71 @@ console.log(k instanceof ThunderCat,
 2. meta end
 
 
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this[Symbol("name")] = name || "Frida";
+    }
+    speak() {
+        return this[Symbol("name")];
+    }
+}
+var a = new Animal("Dali");
+console.log(a.speak());
+```
+
+1. meta
+    * Answers
+        * undefined
+        * Frida
+        * Dali
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+class Animal {
+    constructor(name) {
+        this._name = Symbol("name");
+        this[this._name] = name || "Frida";
+    }
+    speak() {
+        return this[this._name];
+    }
+}
+var a = new Animal("Dali");
+console.log(a.speak(), a[Symbol("name")]);
+```
+
+1. meta
+    * Answers
+        * Dali undefined
+        * Frida undefined
+        * undefined undefined
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
 
 ## Advanced - Functions
 
@@ -628,6 +780,131 @@ console.log(f(1), g(1), h(1));
 2. meta end
 
 
+```
+What is printed to console.log?
+
+var storage = function () {
+    var cache = {};
+    return {
+        get: function (key) {
+            return cache[key];
+        },
+        set: function (key, val) {
+            cache[key] = val;
+        }
+    };
+};
+var s = storage();
+s.cache = {
+    name: "Florence"
+};
+s.set("name", "Katie");
+console.log(s.get("name"));
+```
+
+1. meta
+    * Answers
+        * Katie
+        * Florence
+        * undefined
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var storage = function () {
+    var cache = {};
+    return {
+        get: function (key) {
+            return cache[key];
+        },
+        set: function (key, val) {
+            cache[key] = val;
+        }
+    };
+};
+var s = storage();
+s.cache = {
+    name: "Florence"
+};
+s.get = function (key) {
+    return this.cache[key];
+};
+s.set("name", "Katie");
+console.log(s.get("name"));
+```
+
+1. meta
+    * Answers
+        * Florence
+        * Katie
+        * undefined
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var storage = function () {
+    var cache = {
+        name: "Florence"
+    };
+    return {
+        get: function (key) {
+            return cache[key];
+        },
+        getterProxy: function (f) {
+            return f(cache);
+        },
+        set: function (key, val) {
+            cache[key] = val;
+        }
+    };
+};
+var s = storage();
+s.set("name", "Katie");
+var f = function () {
+    return cache[name];
+};
+var name = s.getterProxy(f);
+console.log(name);
+```
+
+1. meta
+    * Answers
+        * Error is thrown
+        * Florence
+        * Katie
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
 
 ## Advanced - Scope
 
@@ -638,3 +915,111 @@ console.log(f(1), g(1), h(1));
 
 
 ## Advanced - Types: Primitive and Native
+
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Xiao";
+};
+Animal.prototype.name = "Animal";
+
+var Cat = function (name) {
+    this.name = name || "Gato";
+};
+Cat.prototype = new Animal();
+Cat.prototype.name = "Cat";
+
+var c = new Cat("Hans");
+delete c.name;
+console.log(c.name);
+```
+
+1. meta
+    * Answers
+        * Cat
+        * Gato
+        * Hans
+        * Animal
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Xiao";
+};
+Animal.prototype.name = "Animal";
+
+var Cat = function (name) {
+    this.name = name || "Gato";
+};
+Cat.prototype = new Animal();
+Cat.prototype.name = "Cat";
+
+var c = new Cat("Hans");
+delete c.name;
+delete Cat.prototype.name
+console.log(c.name);
+```
+
+1. meta
+    * Answers
+        * Animal
+        * Cat
+        * Gato
+        * Hans
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var Animal = function (name) {
+    this.name = name || "Xiao";
+};
+
+var Cat = function (name) {
+    this.name = name || "Gato";
+};
+Cat.prototype = new Animal();
+
+var c = new Cat("Hans");
+delete c.name;
+console.log(c.name);
+```
+
+1. meta
+    * Answers
+        * Xiao
+        * Gato
+        * Hans
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
