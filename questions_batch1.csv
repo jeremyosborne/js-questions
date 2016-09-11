@@ -82,23 +82,19 @@ console.log(x);",Practical,Beginner,JavaScript,30 Seconds,100,Y
 ,,,,,,Marshal,N
 ,,,,,,String,N
 ,,,,,,Send,N
-20,What is a statement that could be used to describe closure in JavaScript?,Theory,Intermediate,JavaScript,1 Minuteute,Functions defined within another function have access to variables declared in the outer scope.,Y
-,,,,,,Functions have access to all variables defined in all other functions.,N
-,,,,,,Functions return a single value.,N
-,,,,,,Functions are call by object reference.,N
-21,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
+20,The value NaN is of what type?,Practical,Intermediate,JavaScript,30 Seconds,Number,Y
 ,,,,,,Boolean,N
 ,,,,,,Undefined,N
 ,,,,,,Null,N
-22,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
+21,What of the following types is not a native type in ECMAScript?,Practical,Intermediate,JavaScript,30 Seconds,HashMap,Y
 ,,,,,,Array,N
 ,,,,,,Function,N
 ,,,,,,Error,N
-23,Which of the following methods is not a function method?,Practical,Intermediate,JavaScript,30 Seconds,split,Y
+22,Which of the following methods is not a function method?,Practical,Intermediate,JavaScript,30 Seconds,split,Y
 ,,,,,,apply,N
 ,,,,,,call,N
 ,,,,,,bind,N
-24,"What is output to the console when this code is run?
+23,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -108,7 +104,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,3,Y
 ,,,,,,1,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-25,"What is output to the console when this code is run?
+24,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;
@@ -118,7 +114,7 @@ console.log(val);",Practical,Advanced,JavaScript,1 Minute,4,Y
 ,,,,,,3,N
 ,,,,,,This code produces an error,N
 ,,,,,,undefined,N
-26,"What is output to the console when this code is run?
+25,"What is output to the console when this code is run?
 
 var f = function(a) {
     return a.length;

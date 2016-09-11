@@ -236,7 +236,32 @@ document.querySelector(""#button"").addEventListener(""click"", function (e) {
 ,,,,,,BUTTON BUTTON,N
 ,,,,,,BUTTON BODY,N
 ,,,,,,undefined,N
-10,"What is printed to console.log?
+10,"Assuming operation in a browser, a standardized and dev friendly API, and a click is made to `#button` in the HTML, what will happen?
+
+<html>
+    <head>
+        <title>Example<title>
+    </head>
+    <body>
+        <div>
+            <button id=""button"">Click</button>
+        </div>
+    <script>
+document.body.addEventListener(""click"", function (e) {
+    var parent = e.target.parentNode;
+    parent.removeChild(e.target);
+    parent.innerHTML = ""Something"";
+    var el = document.createElement(""div"");
+    el.innerHTML = ""Something else"";
+    parent.parentNode.insertBefore(el, parent.parentNode.firstChild);
+});
+    </script>
+    </body>
+</html>",Practical,Advanced,"JavaScript, Browser",2 Minutes,"The button will be removed and the page will say ""Something Else"" followed by ""Something"".",Y
+,,,,,,"The button will be removed and the page will say ""Something"" followed by ""Something Else"".",N
+,,,,,,"The page will have a ""Click"" button and will say ""Something Else"" followed by ""Something"".",N
+,,,,,,"The page will have a ""Click"" button and will say ""Something"" followed by ""Something Else"".",N
+11,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -256,7 +281,7 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Frida says meow!,N
 ,,,,,,undefined says meow!,N
 ,,,,,,Error is thrown,N
-11,"What is printed to console.log?
+12,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -279,7 +304,7 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Kahlo says meow!,N
 ,,,,,,Kahlo says woof!,N
 ,,,,,,Frida says woof!,N
-12,"What is printed to console.log?
+13,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -302,7 +327,7 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Kahlo says meow!,N
 ,,,,,,Frida says woof!,N
 ,,,,,,Error is thrown,N
-13,"What is printed to console.log?
+14,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -327,7 +352,7 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Kahlo says meow!,N
 ,,,,,,Kahlo says THUNDER THUNDER THUNDER!,N
 ,,,,,,Error is thrown,N
-14,"What is printed to console.log?
+15,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -356,7 +381,7 @@ console.log(k instanceof ThunderCat,
 ,,,,,,true true true true true,N
 ,,,,,,true false false false false,N
 ,,,,,,true false false true false,N
-15,"What is printed to console.log?
+16,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -371,7 +396,7 @@ console.log(a.speak());",Practical,Advanced,JavaScript,2 Minutes,undefined,Y
 ,,,,,,Frida,N
 ,,,,,,Dali,N
 ,,,,,,Error is thrown,N
-16,"What is printed to console.log?
+17,"What is printed to console.log?
 
 class Animal {
     constructor(name) {
@@ -387,7 +412,7 @@ console.log(a.speak(), a[Symbol(""name"")]);",Practical,Advanced,"JavaScript, EC
 ,,,,,,Frida undefined,N
 ,,,,,,undefined undefined,N
 ,,,,,,Error is thrown,N
-17,"What is printed to console.log?
+18,"What is printed to console.log?
 
 var sum = function () {
     var args = Array.prototype.slice.call(arguments);
@@ -401,7 +426,7 @@ console.log(a(1, 2, 3) + b(2, 4, 6));",Practical,Advanced,JavaScript,2 Minutes,3
 ,,,,,,18,N
 ,,,,,,12 24,N
 ,,,,,,Error is thrown,N
-18,"What is printed to console.log?
+19,"What is printed to console.log?
 
 var f = function (a) {
     return a;
@@ -412,7 +437,7 @@ console.log(f(1), g(1), h(1));",Practical,Advanced,JavaScript,2 Minutes,1 2 2,Y
 ,,,,,,1 2 4,N
 ,,,,,,1 1 1,N
 ,,,,,,Error is thrown,N
-19,"What is printed to console.log?
+20,"What is printed to console.log?
 
 var storage = function () {
     var cache = {};
@@ -434,7 +459,7 @@ console.log(s.get(""name""));",Practical,Advanced,JavaScript,2 Minutes,Katie,Y
 ,,,,,,Florence,N
 ,,,,,,undefined,N
 ,,,,,,Error is thrown,N
-20,"What is printed to console.log?
+21,"What is printed to console.log?
 
 var storage = function () {
     var cache = {};
@@ -459,7 +484,7 @@ console.log(s.get(""name""));",Practical,Advanced,JavaScript,2 Minutes,Florence,
 ,,,,,,Katie,N
 ,,,,,,undefined,N
 ,,,,,,Error is thrown,N
-21,"What is printed to console.log?
+22,"What is printed to console.log?
 
 var storage = function () {
     var cache = {
@@ -487,7 +512,7 @@ console.log(name);",Practical,Advanced,JavaScript,2 Minutes,Error is thrown,Y
 ,,,,,,Florence,N
 ,,,,,,Katie,N
 ,,,,,,undefined,N
-22,"What is printed to console.log?
+23,"What is printed to console.log?
 
 var Animal = function (name) {
     this.name = name || ""Xiao"";
@@ -506,7 +531,7 @@ console.log(c.name);",Practical,Advanced,JavaScript,2 Minutes,Cat,Y
 ,,,,,,Gato,N
 ,,,,,,Hans,N
 ,,,,,,Animal,N
-23,"What is printed to console.log?
+24,"What is printed to console.log?
 
 var Animal = function (name) {
     this.name = name || ""Xiao"";
@@ -526,7 +551,7 @@ console.log(c.name);",Practical,Advanced,JavaScript,2 Minutes,Animal,Y
 ,,,,,,Cat,N
 ,,,,,,Gato,N
 ,,,,,,Hans,N
-24,"What is printed to console.log?
+25,"What is printed to console.log?
 
 var Animal = function (name) {
     this.name = name || ""Xiao"";

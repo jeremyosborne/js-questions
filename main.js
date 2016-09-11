@@ -4,7 +4,9 @@ var csvStringify = require('csv-stringify')
 var fs = require('fs')
 var marked = require('marked')
 
-var f = fs.readFileSync('questions.md', 'utf8')
+var fileBasename = 'questions'
+
+var f = fs.readFileSync(fileBasename + '.md', 'utf8')
 var html = marked(f)
 var $ = cheerio.load(html)
 
@@ -38,7 +40,7 @@ var questions = (function () {
   return questions
 })()
 
-// Stats
+// Current file Stats
 // console.log(questions)
 var stats = questions.reduce(function (stats, q) {
   if (stats[q.level]) {
@@ -48,7 +50,7 @@ var stats = questions.reduce(function (stats, q) {
   }
   return stats
 }, {})
-console.log('** Stats **')
+console.log('** %s file Stats **', fileBasename + '.md')
 for (var p in stats) {
   console.log('Category (%s): %s', p, stats[p])
 }
@@ -76,5 +78,5 @@ csvStringify(records, function (err, csv) {
     console.error('Something happened during csv processing:', err)
   }
   // console.log(csv)
-  fs.writeFileSync('questions.csv', csv)
+  fs.writeFileSync(fileBasename + '.csv', csv)
 })

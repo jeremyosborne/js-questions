@@ -435,6 +435,49 @@ document.querySelector("#button").addEventListener("click", function (e) {
 2. meta end
 
 
+```
+Assuming operation in a browser, a standardized and dev friendly API, and a click is made to `#button` in the HTML, what will happen?
+
+<html>
+    <head>
+        <title>Example<title>
+    </head>
+    <body>
+        <div>
+            <button id="button">Click</button>
+        </div>
+    <script>
+document.body.addEventListener("click", function (e) {
+    var parent = e.target.parentNode;
+    parent.removeChild(e.target);
+    parent.innerHTML = "Something";
+    var el = document.createElement("div");
+    el.innerHTML = "Something else";
+    parent.parentNode.insertBefore(el, parent.parentNode.firstChild);
+});
+    </script>
+    </body>
+</html>    
+```
+
+1. meta
+    * Answers
+        * The button will be removed and the page will say "Something Else" followed by "Something".
+        * The button will be removed and the page will say "Something" followed by "Something Else".
+        * The page will have a "Click" button and will say "Something Else" followed by "Something".
+        * The page will have a "Click" button and will say "Something" followed by "Something Else".
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * Browser
+2. meta end
+
+
 
 ## Advanced - ECMAScript 6
 
