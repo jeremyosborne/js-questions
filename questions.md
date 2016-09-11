@@ -567,16 +567,56 @@ console.log(k instanceof ThunderCat,
 
 ## Advanced - Functions
 
-```
 
+
+```
+What is printed to console.log?
+
+var sum = function () {
+    var args = Array.prototype.slice.call(arguments);
+    return args.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+};
+var a = sum.bind(null, 1, 2, 3);
+var b = sum.bind(null, 2, 4, 6);
+console.log(a(1, 2, 3) + b(2, 4, 6));
 ```
 
 1. meta
     * Answers
-        *
-        *
-        *
-        *
+        * 36
+        * 18
+        * 12 24
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var f = function (a) {
+    return a;
+};
+var g = f.bind(null, 2);
+var h = g.bind(null, 4);
+console.log(f(1), g(1), h(1));
+```
+
+1. meta
+    * Answers
+        * 1 2 2
+        * 1 2 4
+        * 1 1 1
+        * Error is thrown
     * Time
         * 2 Minutes
     * Category

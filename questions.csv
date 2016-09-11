@@ -156,7 +156,9 @@ p.then(function (o) {
 ,,,,,,undefined undefined undefined,N
 ,,,,,,Jane Heiress undefined,N
 ,,,,,,Jane undefined undefined,N
-7,"var janeGenerator = function () {
+7,"What is printed to console.log?
+
+var janeGenerator = function () {
     var p = new Promise(function (resolve, reject) {
         setTimeout(function () {
             if (Math.random() > 0.5) {
@@ -190,7 +192,9 @@ janeGenerator().then(function (o) {
 ,,,,,,Jane CEO or Jane VP,N
 ,,,,,,Jane undefined,N
 ,,,,,,Jane CEO undefined or Jane VP undefined,N
-8,"class Animal {
+8,"What is printed to console.log?
+
+class Animal {
     constructor(name) {
         this.name = name || ""Frida"";
     }
@@ -208,7 +212,9 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Frida says meow!,N
 ,,,,,,undefined says meow!,N
 ,,,,,,Error is thrown,N
-9,"class Animal {
+9,"What is printed to console.log?
+
+class Animal {
     constructor(name) {
         this.name = name || ""Frida"";
     }
@@ -229,7 +235,9 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Kahlo says meow!,N
 ,,,,,,Kahlo says woof!,N
 ,,,,,,Frida says woof!,N
-10,"class Animal {
+10,"What is printed to console.log?
+
+class Animal {
     constructor(name) {
         this.name = name || ""Frida"";
     }
@@ -250,7 +258,9 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Kahlo says meow!,N
 ,,,,,,Frida says woof!,N
 ,,,,,,Error is thrown,N
-11,"class Animal {
+11,"What is printed to console.log?
+
+class Animal {
     constructor(name) {
         this.name = name || ""Frida"";
     }
@@ -273,7 +283,9 @@ console.log(k.speak());",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes
 ,,,,,,Kahlo says meow!,N
 ,,,,,,Kahlo says THUNDER THUNDER THUNDER!,N
 ,,,,,,Error is thrown,N
-12,"class Animal {
+12,"What is printed to console.log?
+
+class Animal {
     constructor(name) {
         this.name = name || ""Frida"";
     }
@@ -300,3 +312,28 @@ console.log(k instanceof ThunderCat,
 ,,,,,,true true true true true,N
 ,,,,,,true false false false false,N
 ,,,,,,true false false true false,N
+13,"What is printed to console.log?
+
+var sum = function () {
+    var args = Array.prototype.slice.call(arguments);
+    return args.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+};
+var a = sum.bind(null, 1, 2, 3);
+var b = sum.bind(null, 2, 4, 6);
+console.log(a(1, 2, 3) + b(2, 4, 6));",Practical,Advanced,JavaScript,2 Minutes,36,Y
+,,,,,,18,N
+,,,,,,12 24,N
+,,,,,,Error is thrown,N
+14,"What is printed to console.log?
+
+var f = function (a) {
+    return a;
+};
+var g = f.bind(null, 2);
+var h = g.bind(null, 4);
+console.log(f(1), g(1), h(1));",Practical,Advanced,JavaScript,2 Minutes,1 2 2,Y
+,,,,,,1 2 4,N
+,,,,,,1 1 1,N
+,,,,,,Error is thrown,N
