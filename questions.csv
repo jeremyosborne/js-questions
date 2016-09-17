@@ -1,0 +1,76 @@
+#,Question,Category,Level,Tags,Time,Answer Choices,IsAnswer
+0,"What is printed to console.log?
+
+var circular = function* () {
+    var i = 0;
+    while (true) {
+        yield i++ % 10;
+    }
+};
+var c = circular();
+for (var i = 0; i < 12; i++) {
+    c.next();
+}
+console.log(c.next().value, c.next().value);",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes,2 3,Y
+,,,,,,0 1,N
+,,,,,,1 2,N
+,,,,,,3 4,N
+1,"What is printed to console.log?
+
+var circular = function* () {
+    var i = 0;
+    while (true) {
+        yield i++ % 2;
+    }
+};
+var c = circular();
+for (var i = 0; i < 12; i++) {
+    c.next();
+}
+var finalValue = c.next();
+console.log(finalValue.value, finalValue.done);",Practical,Advanced,JavaScript,2 Minutes,0 false,Y
+,,,,,,1 false,N
+,,,,,,0 true,N
+,,,,,,1 true,N
+2,"What is printed to console.log?
+
+var circular = function* () {
+    var i = 0;
+    while (true) {
+        yield i % 5;
+        i++;
+    }
+};
+var items = [0, 1, 2, 3, 4];
+for (i of circular()) {
+    if (items[i] === i) {
+        items[i] = ""boo"";
+    } else {
+        break;
+    }
+}
+console.log(items);",Practical,Advanced,JavaScript,5 Minutes,"['boo', 'boo', 'boo', 'boo', 'boo']",Y
+,,,,,,"[0, 1, 2, 3, 4]",N
+,,,,,,"[1, 2, 3, 4, 5]",N
+,,,,,,"['boo', 1, 2, 3, 4]",N
+3,"What is printed to console.log?
+
+var genGen = function(i) {
+    return function* () {
+        while (true) {
+            yield i;
+        }
+    };
+};
+var g = genGen(5)();
+for (let i of g) {
+    if (i % 2) {
+        break;
+    } else {
+        continue;
+    }
+}
+g.return(""yes"");
+console.log(g.next().done);",Practical,Advanced,JavaScript,2 Minutes,false,Y
+,,,,,,true,N
+,,,,,,undefined,N
