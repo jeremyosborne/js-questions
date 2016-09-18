@@ -930,7 +930,195 @@ console.log(goo.x, goo.y);
 2. meta end
 
 
+```
+What is printed in console.log?
+
+var chainer = function (f) {
+    return function () {
+        f.call(this);
+        return this;
+    };
+};
+
+var bobby = {
+    name: "Bobby",
+    talk: chainer(function () {
+        return this.name;
+    })
+};
+console.log(bobby.talk().toString(), bobby.talk().talk().name);
+```
+
+1. meta
+    * Answers
+        * [object Object] Bobby
+        * Bobby Bobby
+        * undefined Bobby
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed in console.log?
+
+var chainer = function (f) {
+    return function () {
+        f.call(this);
+        return this;
+    };
+};
+
+var bobby = {
+    name: "Bobby",
+    talk: chainer(function () {
+        return this.name;
+    }),
+    censor: chainer(function() {
+        this.name = "XXXXX";
+    })
+};
+var bernie = {
+    name: "Bernie"
+};
+console.log(bobby.censor.call(bernie).name);
+```
+
+1. meta
+    * Answers
+        * XXXXX
+        * Bernie
+        * Bobby
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed in console.log?
+
+var chainer = function (f) {
+    return function () {
+        f.call(this);
+        return this;
+    };
+};
+
+var bobby = {
+    name: "Bobby",
+    talk: chainer(function () {
+        return this.name;
+    }),
+    censor: chainer(function() {
+        this.name = "XXXXX";
+    })
+};
+var bernie = {
+    name: "Bernie",
+    talk: bobby.talk
+};
+console.log(bernie.talk().name, bobby.talk().name);
+```
+
+1. meta
+    * Answers
+        * Bernie Bobby
+        * Bobby Bobby
+        * undefined Bobby
+        * Bernie Bernie
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+
 ## Advanced - Scope
+
+
+
+```
+What gets printed to console.log?
+
+var f = (function () {
+    f1 = function (a) {
+        return a + 2;
+    };
+    var f1 = function (a) {
+        return a + 4;
+    };
+    return function (a) {
+        return f1(a) + 4;
+    };
+})();
+console.log(f(2));
+```
+
+1. meta
+    * Answers
+        * 10
+        * 8
+        * 6
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var f = (function () {
+    var f1 = function (a) {
+        f1 = a;
+    };
+    return function (a) {
+        f1(a);
+        return f1 + 4;
+    };
+})();
+console.log(f(2));
+```
+
+1. meta
+    * Answers
+        * 6
+        * NaN
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
 
 
 

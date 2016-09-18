@@ -546,7 +546,108 @@ console.log(goo.x, goo.y);",Practical,Advanced,JavaScript,5 Minutes,Error is thr
 ,,,,,,10 10,N
 ,,,,,,20 20,N
 ,,,,,,0 0,N
-21,"What gets printed to console.log?
+21,"What is printed in console.log?
+
+var chainer = function (f) {
+    return function () {
+        f.call(this);
+        return this;
+    };
+};
+
+var bobby = {
+    name: ""Bobby"",
+    talk: chainer(function () {
+        return this.name;
+    })
+};
+console.log(bobby.talk().toString(), bobby.talk().talk().name);",Practical,Advanced,JavaScript,2 Minutes,[object Object] Bobby,Y
+,,,,,,Bobby Bobby,N
+,,,,,,undefined Bobby,N
+,,,,,,Error is thrown,N
+22,"What is printed in console.log?
+
+var chainer = function (f) {
+    return function () {
+        f.call(this);
+        return this;
+    };
+};
+
+var bobby = {
+    name: ""Bobby"",
+    talk: chainer(function () {
+        return this.name;
+    }),
+    censor: chainer(function() {
+        this.name = ""XXXXX"";
+    })
+};
+var bernie = {
+    name: ""Bernie""
+};
+console.log(bobby.censor.call(bernie).name);",Practical,Advanced,JavaScript,2 Minutes,XXXXX,Y
+,,,,,,Bernie,N
+,,,,,,Bobby,N
+,,,,,,undefined,N
+23,"What is printed in console.log?
+
+var chainer = function (f) {
+    return function () {
+        f.call(this);
+        return this;
+    };
+};
+
+var bobby = {
+    name: ""Bobby"",
+    talk: chainer(function () {
+        return this.name;
+    }),
+    censor: chainer(function() {
+        this.name = ""XXXXX"";
+    })
+};
+var bernie = {
+    name: ""Bernie"",
+    talk: bobby.talk
+};
+console.log(bernie.talk().name, bobby.talk().name);",Practical,Advanced,JavaScript,2 Minutes,Bernie Bobby,Y
+,,,,,,Bobby Bobby,N
+,,,,,,undefined Bobby,N
+,,,,,,Bernie Bernie,N
+24,"What gets printed to console.log?
+
+var f = (function () {
+    f1 = function (a) {
+        return a + 2;
+    };
+    var f1 = function (a) {
+        return a + 4;
+    };
+    return function (a) {
+        return f1(a) + 4;
+    };
+})();
+console.log(f(2));",Practical,Advanced,JavaScript,2 Minutes,10,Y
+,,,,,,8,N
+,,,,,,6,N
+,,,,,,Error is thrown,N
+25,"What gets printed to console.log?
+
+var f = (function () {
+    var f1 = function (a) {
+        f1 = a;
+    };
+    return function (a) {
+        f1(a);
+        return f1 + 4;
+    };
+})();
+console.log(f(2));",Practical,Advanced,JavaScript,2 Minutes,6,Y
+,,,,,,NaN,N
+,,,,,,Error is thrown,N
+26,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 10], [""1"", 10], [1, 100]];
 var mapped = new Map(items);
@@ -554,7 +655,7 @@ console.log(mapped.size, mapped.get(1), mapped.get(0), mapped.get(""0""));",Prac
 ,,,,,,4 100 10 10,N
 ,,,,,,undefined 100 0 10,N
 ,,,,,,undefined 100 10 10,N
-22,"What gets printed to console.log?
+27,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 10], [""1"", 10], [1, ""100""]];
 var mapped = new Map(items);
@@ -563,7 +664,7 @@ console.log(mapped.get(0), mapped.get(1));",Practical,Advanced,JavaScript,2 Minu
 ,,,,,,0 1001,N
 ,,,,,,1 101,N
 ,,,,,,0 101,N
-23,"What gets printed to console.log?
+28,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
 var mapped = new Map(items);
@@ -578,7 +679,7 @@ for (let item of mapped) {
 ,,,,,,"[1, 0]",N
 ,,,,,,"[0, 0]",N
 ,,,,,,error is thrown,N
-24,"What gets printed to console.log?
+29,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
 var mapped = new Map(items);
