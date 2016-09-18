@@ -200,7 +200,188 @@ console.log(val.value, val.done);
 
 
 
+```
+What gets printed to console.log?
 
+var mel = function(i) {
+    return function (j) {
+        i--;
+        return i - j;
+    };
+};
+var b = mel(20);
+console.log(b(), b(1), b(3));
+```
+
+1. meta
+    * Answers
+        * NaN 17 14
+        * 18 17 14
+        * undefined 17 14
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var mel = (function(i) {
+    return function (j) {
+        i--;
+        return i - j;
+    };
+})(20);
+console.log(mel(1), mel(2), mel(3));
+```
+
+1. meta
+    * Answers
+        * 18 16 14
+        * 18 17 16
+        * undefined 16 14
+        * undefined undefined unddefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var f = function () {
+    return function () {
+        var i = Array.prototype.slice.call(arguments).reduce((p, n) => p + n, 0);
+        return function (i) {
+            return i * 10;
+        }
+    }
+}
+console.log(f()(3)(10));
+```
+
+1. meta
+    * Answers
+        * 100
+        * 60
+        * 30
+        * 6
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var f = function () {
+    return function () {
+        var i = Array.prototype.slice.call(arguments).reduce((p, n) => p + n, 0);
+        return function () {
+            return i * 10;
+        }
+    }
+}
+console.log(f()(3)(10));
+```
+
+1. meta
+    * Answers
+        * 30
+        * 100
+        * 60
+        * 6
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var three = function () {
+    return function () {
+        if (arguments.length === 3) {
+            return Array.prototype.slice.call(arguments).reduce((p, n) => p + n, 0);
+        } else {
+            return null;
+        }
+    }
+};
+console.log(three()(1, 2, 3), three()(1, 2));
+```
+
+1. meta
+    * Answers
+        * 6 null
+        * 3 null
+        * 6 undefined
+        * 3 undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var three = function () {
+    return function () {
+        if (arguments.length === 3) {
+            Array.prototype.slice.call(arguments).reduce((p, n) => p + n, 0);
+        } else {
+            42;
+        }
+    }
+};
+console.log(three()(1, 2, 3), three()(1, 2));
+```
+
+1. meta
+    * Answers
+        * undefined undefined
+        * 6 42
+        * 6 undefined
+        * undefined 42
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
 
 
 ## Advanced - Scope
