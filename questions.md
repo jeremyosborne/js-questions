@@ -267,6 +267,102 @@ console.log(val.value, val.done);
 2. meta end
 
 
+```
+What is printed to console.log?
+
+Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
+    console.log(val);
+});
+```
+
+1. meta
+    * Answers
+        * 1
+        * 2
+        * 1, 2
+        * udnefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    if (Math.random() < 0.5) {
+        resolve(1);
+    } else {
+        reject(3);
+    }
+}), Promise.reject(2)]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});
+```
+
+1. meta
+    * Answers
+        * 1 or 3
+        * 2
+        * 1
+        * udnefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(10);
+    }, 100);
+}), new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(42);
+    }, 10);
+})]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});
+```
+
+1. meta
+    * Answers
+        * 42
+        * 10
+        * 100
+        * udnefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+        * ECMAScript 6
+    * Tags
+        * JavaScript
+2. meta end
+
+
 
 ## Advanced - Functions
 
@@ -455,98 +551,6 @@ console.log(three()(1, 2, 3), three()(1, 2));
         * JavaScript
 2. meta end
 
-
-```
-What is printed to console.log?
-
-Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
-    console.log(val);
-});
-```
-
-1. meta
-    * Answers
-        * 1
-        * 2
-        * 1, 2
-        * udnefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Advanced
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-What is printed to console.log?
-
-Promise.race([new Promise(function (resolve, reject) {
-    if (Math.random() < 0.5) {
-        resolve(1);
-    } else {
-        reject(3);
-    }
-}), Promise.reject(2)]).then(function (val) {
-    console.log(val);
-}).catch(function (val) {
-    console.log(val);
-});
-```
-
-1. meta
-    * Answers
-        * 1 or 3
-        * 2
-        * 1
-        * udnefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Advanced
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-What is printed to console.log?
-
-Promise.race([new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve(10);
-    }, 100);
-}), new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve(42);
-    }, 10);
-})]).then(function (val) {
-    console.log(val);
-}).catch(function (val) {
-    console.log(val);
-});
-```
-
-1. meta
-    * Answers
-        * 42
-        * 10
-        * 100
-        * udnefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Advanced
-    * Tags
-        * JavaScript
-2. meta end
 
 
 ## Advanced - Scope
