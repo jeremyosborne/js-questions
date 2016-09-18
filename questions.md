@@ -216,7 +216,6 @@ for (let i of g) {
         continue;
     }
 }
-g.return("yes");
 console.log(g.next().done);
 ```
 
