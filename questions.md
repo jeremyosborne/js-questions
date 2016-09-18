@@ -393,3 +393,121 @@ console.log(three()(1, 2, 3), three()(1, 2));
 
 
 ## Advanced - Types: Primitive and Native
+
+
+
+```
+What gets printed to console.log?
+
+var items = [[0, 0], ["0", 10], ["1", 10], [1, 100]];
+var mapped = new Map(items);
+console.log(mapped.size, mapped.get(1), mapped.get(0), mapped.get("0"));
+```
+
+1. meta
+    * Answers
+        * 4 100 0 10
+        * 4 100 10 10
+        * undefined 100 0 10
+        * undefined 100 10 10
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var items = [[0, 0], ["0", 10], ["1", 10], [1, "100"]];
+var mapped = new Map(items);
+mapped.forEach((v, k) => mapped.set(k, v+1));
+console.log(mapped.get(0), mapped.get(1));
+```
+
+1. meta
+    * Answers
+        * 1 1001
+        * 0 1001
+        * 1 101
+        * 0 101
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var items = [[0, 0], ["0", 1], [1, 2], ["1", 3]];
+var mapped = new Map(items);
+mapped.forEach((v, k) => mapped.set(k, v+1));
+mapped.forEach((v, k) => mapped.set(k, v % 2));
+var finalMap = new Map();
+mapped.forEach((v, k) => finalMap.set(k, v));
+for (let item of mapped) {
+    console.log(item);
+    break;
+}
+```
+
+1. meta
+    * Answers
+        * [0, 1]
+        * [1, 0]
+        * [0, 0]
+        * error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var items = [[0, 0], ["0", 1], [1, 2], ["1", 3]];
+var mapped = new Map(items);
+mapped.forEach((v, k) => mapped.set(k, v+1));
+mapped.forEach((v, k) => mapped.set(k, v % 2));
+var finalMap = new Map();
+mapped.forEach((v, k) => finalMap.set(k, v));
+var final;
+for (let item of mapped) {
+    let [k, v] = item;
+    final = [k, v * 10];
+};
+console.log(final[0], final[1]);
+```
+
+1. meta
+    * Answers
+        * [1, 0]
+        * [1, 2]
+        * [0, 1]
+        * error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end

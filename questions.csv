@@ -171,3 +171,52 @@ console.log(three()(1, 2, 3), three()(1, 2));",Practical,Advanced,JavaScript,2 M
 ,,,,,,6 42,N
 ,,,,,,6 undefined,N
 ,,,,,,undefined 42,N
+11,"What gets printed to console.log?
+
+var items = [[0, 0], [""0"", 10], [""1"", 10], [1, 100]];
+var mapped = new Map(items);
+console.log(mapped.size, mapped.get(1), mapped.get(0), mapped.get(""0""));",Practical,Advanced,JavaScript,2 Minutes,4 100 0 10,Y
+,,,,,,4 100 10 10,N
+,,,,,,undefined 100 0 10,N
+,,,,,,undefined 100 10 10,N
+12,"What gets printed to console.log?
+
+var items = [[0, 0], [""0"", 10], [""1"", 10], [1, ""100""]];
+var mapped = new Map(items);
+mapped.forEach((v, k) => mapped.set(k, v+1));
+console.log(mapped.get(0), mapped.get(1));",Practical,Advanced,JavaScript,2 Minutes,1 1001,Y
+,,,,,,0 1001,N
+,,,,,,1 101,N
+,,,,,,0 101,N
+13,"What gets printed to console.log?
+
+var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
+var mapped = new Map(items);
+mapped.forEach((v, k) => mapped.set(k, v+1));
+mapped.forEach((v, k) => mapped.set(k, v % 2));
+var finalMap = new Map();
+mapped.forEach((v, k) => finalMap.set(k, v));
+for (let item of mapped) {
+    console.log(item);
+    break;
+}",Practical,Advanced,JavaScript,2 Minutes,"[0, 1]",Y
+,,,,,,"[1, 0]",N
+,,,,,,"[0, 0]",N
+,,,,,,error is thrown,N
+14,"What gets printed to console.log?
+
+var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
+var mapped = new Map(items);
+mapped.forEach((v, k) => mapped.set(k, v+1));
+mapped.forEach((v, k) => mapped.set(k, v % 2));
+var finalMap = new Map();
+mapped.forEach((v, k) => finalMap.set(k, v));
+var final;
+for (let item of mapped) {
+    let [k, v] = item;
+    final = [k, v * 10];
+};
+console.log(final[0], final[1]);",Practical,Advanced,JavaScript,2 Minutes,"[1, 0]",Y
+,,,,,,"[1, 2]",N
+,,,,,,"[0, 1]",N
+,,,,,,error is thrown,N
