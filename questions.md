@@ -357,9 +357,9 @@ Promise.race([new Promise(function (resolve, reject) {
         * Practical
     * Level
         * Advanced
-        * ECMAScript 6
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -551,6 +551,383 @@ console.log(three()(1, 2, 3), three()(1, 2));
         * JavaScript
 2. meta end
 
+
+```
+What is printed to console.log?
+
+var healthMixin = {
+    health: 100,
+    heal: function (i) {
+        this.health += i || 1;
+    }
+};
+
+var positionMixin = {
+    x: 0,
+    y: 0,
+    teleport: function (x, y) {
+        this.x = x || 0;
+        this.y = y || 0;
+    },
+    move: function(x, y) {
+        this.x = this.x + x || 0;
+        this.y = this.y + y || 0;
+    }
+};
+
+var mixer = function() {
+    var args = Array.prototype.slice.call(arguments);
+    var base = args[0];
+    var mixins = args.slice(1);
+    mixins.forEach(function (m) {
+        for (var p in m) {
+            base[p] = m[p];
+        }
+    });
+    return base;
+};
+
+var fuzzyMonsterFactory = function () {
+    var proto = {
+        name: 'Fuzzy',
+        health: 10
+    };
+    return Object.create(proto);
+};
+
+var mobileMonsterFactory = function () {
+    var m = Object.create(fuzzyMonsterFactory());
+    return mixer(m, positionMixin);
+};
+
+var goo = mobileMonsterFactory();
+goo.teleport(0, 5);
+goo.move(10, 10);
+console.log(goo.x, goo.y);
+```
+
+1. meta
+    * Answers
+        * 10 15
+        * 0 0
+        * 10 10
+        * 0 5
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var healthMixin = {
+    health: 100,
+    heal: function (i) {
+        this.health += i || 1;
+    }
+};
+
+var positionMixin = {
+    x: 0,
+    y: 0,
+    teleport: function (x, y) {
+        this.x = x || 0;
+        this.y = y || 0;
+    },
+    move: function(x, y) {
+        this.x = this.x + x || 0;
+        this.y = this.y + y || 0;
+    }
+};
+
+var mixer = function() {
+    var args = Array.prototype.slice.call(arguments);
+    var base = args[0];
+    var mixins = args.slice(1);
+    mixins.forEach(function (m) {
+        for (var p in m) {
+            base[p] = m[p];
+        }
+    });
+    return base;
+};
+
+var fuzzyMonsterFactory = function () {
+    var proto = {
+        name: 'Fuzzy',
+        health: 10
+    };
+    return Object.create(proto);
+};
+
+var mobileMonsterFactory = function () {
+    var m = Object.create(fuzzyMonsterFactory());
+    return mixer(m, positionMixin, healthMixin);
+};
+
+var goo = mobileMonsterFactory();
+goo.teleport();
+goo.move(10, 10);
+goo.heal(10);
+console.log(goo.x, goo.y, goo.health);
+```
+
+1. meta
+    * Answers
+        * 10 10 110
+        * 10 10 100
+        * 0 0 100
+        * 10 10 0
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var healthMixin = {
+    health: 100,
+    heal: function (i) {
+        this.health += i || 1;
+    }
+};
+
+var positionMixin = {
+    x: 0,
+    y: 0,
+    teleport: function (x, y) {
+        this.x = x || 0;
+        this.y = y || 0;
+    },
+    move: function(x, y) {
+        this.x = this.x + x || 0;
+        this.y = this.y + y || 0;
+    }
+};
+
+var mixer = function() {
+    var args = Array.prototype.slice.call(arguments);
+    var base = args[0];
+    var mixins = args.slice(1);
+    mixins.forEach(function (m) {
+        for (var p in m) {
+            base[p] = m[p];
+        }
+    });
+    return base;
+};
+
+var fuzzyMonsterFactory = function () {
+    var proto = {
+        name: 'Fuzzy',
+        health: 10
+    };
+    return Object.create(proto);
+};
+
+var mobileMonsterFactory = function () {
+    var m = Object.create(fuzzyMonsterFactory());
+    return mixer(m, positionMixin, healthMixin);
+};
+
+var goo = mobileMonsterFactory();
+var props = [];
+for (var p in goo) {
+    if (goo.hasOwnProperty(p)) {
+        props.push(p);
+    }
+}
+console.log(props);
+```
+
+1. meta
+    * Answers
+        * [ 'x', 'y', 'teleport', 'move', 'health', 'heal' ]
+        * [ 'x', 'y', 'teleport', 'name', 'move', 'health', 'heal' ]
+        * [ 'x', 'y', 'health' ]
+        * [ ]
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var healthMixin = {
+    health: 100,
+    heal: function (i) {
+        this.health += i || 1;
+    }
+};
+
+var positionMixin = {
+    x: 0,
+    y: 0,
+    teleport: function (x, y) {
+        this.x = x || 0;
+        this.y = y || 0;
+    },
+    move: function(x, y) {
+        this.x = this.x + x || 0;
+        this.y = this.y + y || 0;
+    }
+};
+
+var mixer = function() {
+    var args = Array.prototype.slice.call(arguments);
+    var base = args[0];
+    var mixins = args.slice(1);
+    mixins.forEach(function (m) {
+        for (var p in m) {
+            base[p] = m[p];
+        }
+    });
+    return base;
+};
+
+var fuzzyMonsterFactory = function () {
+    var proto = {
+        name: 'Fuzzy',
+        health: 10
+    };
+    return Object.create(proto);
+};
+
+var mobileMonsterFactory = function () {
+    var m = Object.create(fuzzyMonsterFactory());
+    return mixer(m, positionMixin, healthMixin);
+};
+
+var goo = mobileMonsterFactory();
+mixer(goo, {
+    z: 0,
+    move: function(x, y, z) {
+        this.x = this.x + x || 0;
+        this.y = this.y + y || 0;
+        this.z = this.z + z || 0;
+    }
+});
+goo.move(1, 2);
+goo.move(null, 3, 5);
+goo.teleport(2, 4);
+console.log(goo.x, goo.y, goo.z);
+```
+
+1. meta
+    * Answers
+        * 2 4 5
+        * 2 4 0
+        * NaN 4 5
+        * 2 4 undefined
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var healthMixin = {
+    health: 100,
+    heal: function (i) {
+        this.health += i || 1;
+    }
+};
+
+var positionMixin = {
+    x: 0,
+    y: 0,
+    teleport: function (x, y) {
+        this.x = x || 0;
+        this.y = y || 0;
+    },
+    move: function(x, y) {
+        this.x = this.x + x || 0;
+        this.y = this.y + y || 0;
+    }
+};
+
+var mixer = function() {
+    var args = Array.prototype.slice.call(arguments);
+    var base = args[0];
+    var mixins = args.slice(1);
+    mixins.forEach(function (m) {
+        for (var p in m) {
+            base[p] = m[p];
+        }
+    });
+    return base;
+};
+
+var fuzzyMonsterFactory = function () {
+    var proto = {
+        name: 'Fuzzy',
+        health: 10
+    };
+    return Object.create(proto);
+};
+
+var mobileMonsterFactory = function () {
+    var m = Object.create(fuzzyMonsterFactory());
+    return mixer(m, positionMixin, healthMixin);
+};
+
+var goo = mobileMonsterFactory();
+var goo2 = fuzzyMonsterFactory();
+mixer(goo2, {
+    x: goo.x,
+    y: goo.y,
+    move: function (x, y) {
+        this.x += x * 2 || 0;
+        this.y += y * 2 || 0;
+    }
+});
+delete goo2.move;
+goo2.move(10, 10);
+console.log(goo.x, goo.y);
+```
+
+1. meta
+    * Answers
+        * Error is thrown
+        * 10 10
+        * 20 20
+        * 0 0
+    * Time
+        * 5 Minutes
+    * Category
+        * Practical
+    * Level
+        * Advanced
+    * Tags
+        * JavaScript
+2. meta end
 
 
 ## Advanced - Scope
