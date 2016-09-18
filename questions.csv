@@ -1,5 +1,46 @@
 #,Question,Category,Level,Tags,Time,Answer Choices,IsAnswer
-0,"What is printed to console.log?
+0,"What is printed to console log?
+
+var queue = function (items) {
+    var results = [];
+    var doit = function () {
+        if (items.length) {
+            var i = items.pop();
+            results.push(i());
+            setTimeout(doit, 10);
+        }
+        return results;
+    };
+    return doit;
+};
+var q = queue([() => 1, () => 3]);
+console.log(q());",Practical,Advanced,JavaScript,2 Minutes,[ 3 ],Y
+,,,,,,"[ 1 ,3 ]",N
+,,,,,,[ 1 ],N
+,,,,,,error is thrown,N
+1,"What is printed by console.log?
+
+var queue = function (items) {
+    var results = [];
+    var doit = function () {
+        if (items.length) {
+            var i = items.pop();
+            results.push(i());
+            setTimeout(doit, 10);
+        }
+        return results
+    };
+    return doit;
+};
+var q = queue([() => 1, () => 3]);
+var results = q();
+setTimeout(function () {
+    console.log(results);
+}, 1000);",Practical,Advanced,JavaScript,2 Minutes,"[ 3, 1 ]",Y
+,,,,,,[ 3 ],N
+,,,,,,[ 1 ],N
+,,,,,,"[ 1, 3 ]",N
+2,"What is printed to console.log?
 
 var circular = function* () {
     var i = 0;
@@ -15,7 +56,7 @@ console.log(c.next().value, c.next().value);",Practical,Advanced,"JavaScript, EC
 ,,,,,,0 1,N
 ,,,,,,1 2,N
 ,,,,,,3 4,N
-1,"What is printed to console.log?
+3,"What is printed to console.log?
 
 var circular = function* () {
     var i = 0;
@@ -32,7 +73,7 @@ console.log(finalValue.value, finalValue.done);",Practical,Advanced,JavaScript,2
 ,,,,,,1 false,N
 ,,,,,,0 true,N
 ,,,,,,1 true,N
-2,"What is printed to console.log?
+4,"What is printed to console.log?
 
 var circular = function* () {
     var i = 0;
@@ -53,7 +94,7 @@ console.log(items);",Practical,Advanced,JavaScript,5 Minutes,"['boo', 'boo', 'bo
 ,,,,,,"[0, 1, 2, 3, 4]",N
 ,,,,,,"[1, 2, 3, 4, 5]",N
 ,,,,,,"['boo', 1, 2, 3, 4]",N
-3,"What is printed to console.log?
+5,"What is printed to console.log?
 
 var genGen = function(i) {
     return function* () {
@@ -74,7 +115,7 @@ g.return(""yes"");
 console.log(g.next().done);",Practical,Advanced,JavaScript,2 Minutes,false,Y
 ,,,,,,true,N
 ,,,,,,undefined,N
-4,"What is printed to console.log?
+6,"What is printed to console.log?
 
 var gen = function* () {
     yield 1;
@@ -89,7 +130,7 @@ console.log(val.value, val.done);",Practical,Advanced,JavaScript,2 Minutes,1 fal
 ,,,,,,2 true,N
 ,,,,,,1 true,N
 ,,,,,,2 false,N
-5,"What gets printed to console.log?
+7,"What gets printed to console.log?
 
 var mel = function(i) {
     return function (j) {
@@ -101,7 +142,7 @@ var b = mel(20);
 console.log(b(), b(1), b(3));",Practical,Advanced,JavaScript,2 Minutes,NaN 17 14,Y
 ,,,,,,18 17 14,N
 ,,,,,,undefined 17 14,N
-6,"What gets printed to console.log?
+8,"What gets printed to console.log?
 
 var mel = (function(i) {
     return function (j) {
@@ -113,7 +154,7 @@ console.log(mel(1), mel(2), mel(3));",Practical,Advanced,JavaScript,2 Minutes,18
 ,,,,,,18 17 16,N
 ,,,,,,undefined 16 14,N
 ,,,,,,undefined undefined unddefined,N
-7,"What is printed to console.log?
+9,"What is printed to console.log?
 
 var f = function () {
     return function () {
@@ -127,7 +168,7 @@ console.log(f()(3)(10));",Practical,Advanced,JavaScript,2 Minutes,100,Y
 ,,,,,,60,N
 ,,,,,,30,N
 ,,,,,,6,N
-8,"What is printed to console.log?
+10,"What is printed to console.log?
 
 var f = function () {
     return function () {
@@ -141,7 +182,7 @@ console.log(f()(3)(10));",Practical,Advanced,JavaScript,2 Minutes,30,Y
 ,,,,,,100,N
 ,,,,,,60,N
 ,,,,,,6,N
-9,"What is printed to console.log?
+11,"What is printed to console.log?
 
 var three = function () {
     return function () {
@@ -156,7 +197,7 @@ console.log(three()(1, 2, 3), three()(1, 2));",Practical,Advanced,JavaScript,2 M
 ,,,,,,3 null,N
 ,,,,,,6 undefined,N
 ,,,,,,3 undefined,N
-10,"What is printed to console.log?
+12,"What is printed to console.log?
 
 var three = function () {
     return function () {
@@ -171,7 +212,49 @@ console.log(three()(1, 2, 3), three()(1, 2));",Practical,Advanced,JavaScript,2 M
 ,,,,,,6 42,N
 ,,,,,,6 undefined,N
 ,,,,,,undefined 42,N
-11,"What gets printed to console.log?
+13,"What is printed to console.log?
+
+Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
+    console.log(val);
+});",Practical,Advanced,JavaScript,2 Minutes,1,Y
+,,,,,,2,N
+,,,,,,"1, 2",N
+,,,,,,udnefined,N
+14,"What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    if (Math.random() < 0.5) {
+        resolve(1);
+    } else {
+        reject(3);
+    }
+}), Promise.reject(2)]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});",Practical,Advanced,JavaScript,2 Minutes,1 or 3,Y
+,,,,,,2,N
+,,,,,,1,N
+,,,,,,udnefined,N
+15,"What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(10);
+    }, 100);
+}), new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(42);
+    }, 10);
+})]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});",Practical,Advanced,JavaScript,2 Minutes,42,Y
+,,,,,,10,N
+,,,,,,100,N
+,,,,,,udnefined,N
+16,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 10], [""1"", 10], [1, 100]];
 var mapped = new Map(items);
@@ -179,7 +262,7 @@ console.log(mapped.size, mapped.get(1), mapped.get(0), mapped.get(""0""));",Prac
 ,,,,,,4 100 10 10,N
 ,,,,,,undefined 100 0 10,N
 ,,,,,,undefined 100 10 10,N
-12,"What gets printed to console.log?
+17,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 10], [""1"", 10], [1, ""100""]];
 var mapped = new Map(items);
@@ -188,7 +271,7 @@ console.log(mapped.get(0), mapped.get(1));",Practical,Advanced,JavaScript,2 Minu
 ,,,,,,0 1001,N
 ,,,,,,1 101,N
 ,,,,,,0 101,N
-13,"What gets printed to console.log?
+18,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
 var mapped = new Map(items);
@@ -203,7 +286,7 @@ for (let item of mapped) {
 ,,,,,,"[1, 0]",N
 ,,,,,,"[0, 0]",N
 ,,,,,,error is thrown,N
-14,"What gets printed to console.log?
+19,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
 var mapped = new Map(items);
