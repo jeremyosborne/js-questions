@@ -52,7 +52,7 @@ var stats = questions.reduce(function (stats, q) {
 }, {})
 console.log('** %s file Stats **', fileBasename + '.md')
 for (var p in stats) {
-  console.log('Category (%s): %s', p, stats[p])
+  console.log('Level (%s): %s', p, stats[p])
 }
 console.log('Total questions:', questions.length)
 

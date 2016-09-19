@@ -201,43 +201,6 @@ console.log(items);
 ```
 What is printed to console.log?
 
-var genGen = function(i) {
-    return function* () {
-        while (true) {
-            yield i;
-        }
-    };
-};
-var g = genGen(5)();
-for (let i of g) {
-    if (i % 2) {
-        break;
-    } else {
-        continue;
-    }
-}
-console.log(g.next().done);
-```
-
-1. meta
-    * Answers
-        * false
-        * true
-        * undefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Advanced
-    * Tags
-        * JavaScript
-2. meta end
-
-
-```
-What is printed to console.log?
-
 var gen = function* () {
     yield 1;
     yield* function* () {
@@ -280,76 +243,6 @@ Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
         * 1
         * 2
         * 1, 2
-        * udnefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Advanced
-    * Tags
-        * JavaScript
-        * ECMAScript 6
-2. meta end
-
-
-```
-What is printed to console.log?
-
-Promise.race([new Promise(function (resolve, reject) {
-    if (Math.random() < 0.5) {
-        resolve(1);
-    } else {
-        reject(3);
-    }
-}), Promise.reject(2)]).then(function (val) {
-    console.log(val);
-}).catch(function (val) {
-    console.log(val);
-});
-```
-
-1. meta
-    * Answers
-        * 1 or 3
-        * 2
-        * 1
-        * udnefined
-    * Time
-        * 2 Minutes
-    * Category
-        * Practical
-    * Level
-        * Advanced
-    * Tags
-        * JavaScript
-        * ECMAScript 6
-2. meta end
-
-
-```
-What is printed to console.log?
-
-Promise.race([new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve(10);
-    }, 100);
-}), new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve(42);
-    }, 10);
-})]).then(function (val) {
-    console.log(val);
-}).catch(function (val) {
-    console.log(val);
-});
-```
-
-1. meta
-    * Answers
-        * 42
-        * 10
-        * 100
         * udnefined
     * Time
         * 2 Minutes
@@ -1181,6 +1074,111 @@ console.log(mapped.get(0), mapped.get(1));
 2. meta end
 
 
+# Guru
+
+
+```
+What is printed to console.log?
+
+console.log(parseInt("abc") < Infinity);
+```
+
+1. meta
+    * Answers
+        * false
+        * true
+        * Error is thrown
+        * NaN
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var x = "42" + NaN;
+x = parseInt(x);
+console.log(x + x - "42");
+```
+
+1. meta
+    * Answers
+        * 42
+        * 424242
+        * 8442
+        * NaN
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+console.log(NaN + NaN + "NaN" - NaN);
+```
+
+1. meta
+    * Answers
+        * NaN
+        * NaNNaN
+        * NaNNaNNaN
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var f = function (a) {
+    if (a == null) {
+        console.log("Hello");
+    }
+    if (a === null) {
+        console.log("World");
+    }
+};
+f();
+```
+
+1. meta
+    * Answers
+        * Hello
+        * Hello World
+        * World
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
 ```
 What gets printed to console.log?
 
@@ -1207,7 +1205,7 @@ for (let item of mapped) {
     * Category
         * Practical
     * Level
-        * Advanced
+        * Guru
     * Tags
         * JavaScript
 2. meta end
@@ -1241,7 +1239,412 @@ console.log(final[0], final[1]);
     * Category
         * Practical
     * Level
-        * Advanced
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+console.log(Number("false") == Number(false));
+```
+
+1. meta
+    * Answers
+        * false
+        * true
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+console.log(typeof String("abc") === typeof "abc");
+```
+
+1. meta
+    * Answers
+        * true
+        * false
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+console.log(typeof NaN === typeof Number);
+```
+
+1. meta
+    * Answers
+        * false
+        * true
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var Animal = function () {};
+Animal.prototype.words = [];
+Animal.prototype.memorize = function (word) {
+    this.words.push(word);
+};
+Animal.prototype.speak = function () {
+    return this.words.join(" ");
+};
+var cat = new Animal();
+cat.memorize("meow");
+cat.memorize("miew");
+var dog = new Animal();
+dog.memorize("woof");
+var bird = new Animal();
+console.log(bird.speak());
+```
+
+1. meta
+    * Answers
+        * meow miew woof
+        * " "
+        * undefined
+        * meow miew
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+setTimeout(function () {
+    console.log("Hello");
+    setTimeout(arguments.callee, 100);
+}, 100);
+```
+
+1. meta
+    * Answers
+        * Hello... (repeateding forever)
+        * Hello
+        * Hello then an Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+Function.prototype.memoize = function() {
+    var self = this;
+    var cache = {};
+    return function () {
+        var args = Array.prototype.slice.call(arguments);
+        var argsKey = args.join("-");
+        if (args in cache) {
+            return cache[argsKey];
+        } else {
+            return cache[argsKey] = self.apply(self, args);
+        }
+    };
+};
+var f = function (a, b) {
+    return a + b
+};
+var test = f.memoize();
+test("4-2");
+console.log(test(4 - 2));
+```
+
+1. meta
+    * Answers
+        * NaN
+        * 2
+        * "4-2"
+        * Error is thrown
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var o = {};
+o[42] = 100;
+o["42"] = 200;
+console.log(o[42], o["42"]);
+```
+
+1. meta
+    * Answers
+        * 200 200
+        * 100 200
+        * undefined 200
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+Of the answers, which one is arguably the best reason this could _could_ cause an error?
+
+var o = {
+    100: "hello",
+    "200": "world",
+    test: "param",
+};
+```
+
+1. meta
+    * Answers
+        * Trailing comma after 'test' parameter could break old IE browsers.
+        * Using quotes on keys can break old IE browsers.
+        * There isn't anything wrong with this code even in legacy browsers.
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+        * Browser
+2. meta end
+
+
+```
+Of the answers, which one is arguably the best reasoning for why the following exists in code supporting old browsers?
+
+node.onclick = function (e) {
+    e = e || window.event;
+    // ... other code here
+};
+```
+
+1. meta
+    * Answers
+        * Older Internet Explorer browsers would not pass the event object directly.
+        * Older Firefox browsers would not pass the event object directly.
+        * By Internet Explorer 8 this code was no longer needed.
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+        * Browser
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var f = function () {
+    return
+    {
+        n: 1000
+    };
+};
+console.log(f().n);
+```
+
+1. meta
+    * Answers
+        * Error is thrown
+        * 1000
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What gets printed to console.log?
+
+var f = function (a, b, c) {};
+console.log(f.name, f.length);
+```
+
+1. meta
+    * Answers
+        * "" 3
+        * anonymous 3
+        * undefined 3
+        * f 3
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+2. meta end
+
+
+```
+What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    if (Math.random() < 0.5) {
+        resolve(1);
+    } else {
+        reject(3);
+    }
+}), Promise.reject(2)]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});
+```
+
+1. meta
+    * Answers
+        * 1 or 3
+        * 2
+        * 1
+        * udnefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(10);
+    }, 100);
+}), new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(42);
+    }, 10);
+})]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});
+```
+
+1. meta
+    * Answers
+        * 42
+        * 10
+        * 100
+        * udnefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
+    * Tags
+        * JavaScript
+        * ECMAScript 6
+2. meta end
+
+
+```
+What is printed to console.log?
+
+var genGen = function(i) {
+    return function* () {
+        while (true) {
+            yield i;
+        }
+    };
+};
+var g = genGen(5)();
+for (let i of g) {
+    if (i % 2) {
+        break;
+    } else {
+        continue;
+    }
+}
+console.log(g.next().done);
+```
+
+1. meta
+    * Answers
+        * false
+        * true
+        * undefined
+    * Time
+        * 2 Minutes
+    * Category
+        * Practical
+    * Level
+        * Guru
     * Tags
         * JavaScript
 2. meta end

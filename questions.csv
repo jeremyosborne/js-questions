@@ -96,26 +96,6 @@ console.log(items);",Practical,Advanced,JavaScript,5 Minutes,"['boo', 'boo', 'bo
 ,,,,,,"['boo', 1, 2, 3, 4]",N
 5,"What is printed to console.log?
 
-var genGen = function(i) {
-    return function* () {
-        while (true) {
-            yield i;
-        }
-    };
-};
-var g = genGen(5)();
-for (let i of g) {
-    if (i % 2) {
-        break;
-    } else {
-        continue;
-    }
-}
-console.log(g.next().done);",Practical,Advanced,JavaScript,2 Minutes,false,Y
-,,,,,,true,N
-,,,,,,undefined,N
-6,"What is printed to console.log?
-
 var gen = function* () {
     yield 1;
     yield* function* () {
@@ -129,7 +109,7 @@ console.log(val.value, val.done);",Practical,Advanced,JavaScript,2 Minutes,1 fal
 ,,,,,,2 true,N
 ,,,,,,1 true,N
 ,,,,,,2 false,N
-7,"What is printed to console.log?
+6,"What is printed to console.log?
 
 Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
     console.log(val);
@@ -137,41 +117,7 @@ Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
 ,,,,,,2,N
 ,,,,,,"1, 2",N
 ,,,,,,udnefined,N
-8,"What is printed to console.log?
-
-Promise.race([new Promise(function (resolve, reject) {
-    if (Math.random() < 0.5) {
-        resolve(1);
-    } else {
-        reject(3);
-    }
-}), Promise.reject(2)]).then(function (val) {
-    console.log(val);
-}).catch(function (val) {
-    console.log(val);
-});",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes,1 or 3,Y
-,,,,,,2,N
-,,,,,,1,N
-,,,,,,udnefined,N
-9,"What is printed to console.log?
-
-Promise.race([new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve(10);
-    }, 100);
-}), new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve(42);
-    }, 10);
-})]).then(function (val) {
-    console.log(val);
-}).catch(function (val) {
-    console.log(val);
-});",Practical,Advanced,"JavaScript, ECMAScript 6",2 Minutes,42,Y
-,,,,,,10,N
-,,,,,,100,N
-,,,,,,udnefined,N
-10,"What gets printed to console.log?
+7,"What gets printed to console.log?
 
 var mel = function(i) {
     return function (j) {
@@ -183,7 +129,7 @@ var b = mel(20);
 console.log(b(), b(1), b(3));",Practical,Advanced,JavaScript,2 Minutes,NaN 17 14,Y
 ,,,,,,18 17 14,N
 ,,,,,,undefined 17 14,N
-11,"What gets printed to console.log?
+8,"What gets printed to console.log?
 
 var mel = (function(i) {
     return function (j) {
@@ -195,7 +141,7 @@ console.log(mel(1), mel(2), mel(3));",Practical,Advanced,JavaScript,2 Minutes,18
 ,,,,,,18 17 16,N
 ,,,,,,undefined 16 14,N
 ,,,,,,undefined undefined unddefined,N
-12,"What is printed to console.log?
+9,"What is printed to console.log?
 
 var f = function () {
     return function () {
@@ -209,7 +155,7 @@ console.log(f()(3)(10));",Practical,Advanced,JavaScript,2 Minutes,100,Y
 ,,,,,,60,N
 ,,,,,,30,N
 ,,,,,,6,N
-13,"What is printed to console.log?
+10,"What is printed to console.log?
 
 var f = function () {
     return function () {
@@ -223,7 +169,7 @@ console.log(f()(3)(10));",Practical,Advanced,JavaScript,2 Minutes,30,Y
 ,,,,,,100,N
 ,,,,,,60,N
 ,,,,,,6,N
-14,"What is printed to console.log?
+11,"What is printed to console.log?
 
 var three = function () {
     return function () {
@@ -238,7 +184,7 @@ console.log(three()(1, 2, 3), three()(1, 2));",Practical,Advanced,JavaScript,2 M
 ,,,,,,3 null,N
 ,,,,,,6 undefined,N
 ,,,,,,3 undefined,N
-15,"What is printed to console.log?
+12,"What is printed to console.log?
 
 var three = function () {
     return function () {
@@ -253,7 +199,7 @@ console.log(three()(1, 2, 3), three()(1, 2));",Practical,Advanced,JavaScript,2 M
 ,,,,,,6 42,N
 ,,,,,,6 undefined,N
 ,,,,,,undefined 42,N
-16,"What is printed to console.log?
+13,"What is printed to console.log?
 
 var healthMixin = {
     health: 100,
@@ -307,7 +253,7 @@ console.log(goo.x, goo.y);",Practical,Advanced,JavaScript,5 Minutes,10 15,Y
 ,,,,,,0 0,N
 ,,,,,,10 10,N
 ,,,,,,0 5,N
-17,"What is printed to console.log?
+14,"What is printed to console.log?
 
 var healthMixin = {
     health: 100,
@@ -362,7 +308,7 @@ console.log(goo.x, goo.y, goo.health);",Practical,Advanced,JavaScript,5 Minutes,
 ,,,,,,10 10 100,N
 ,,,,,,0 0 100,N
 ,,,,,,10 10 0,N
-18,"What is printed to console.log?
+15,"What is printed to console.log?
 
 var healthMixin = {
     health: 100,
@@ -420,7 +366,7 @@ console.log(props);",Practical,Advanced,JavaScript,5 Minutes,"[ 'x', 'y', 'telep
 ,,,,,,"[ 'x', 'y', 'teleport', 'name', 'move', 'health', 'heal' ]",N
 ,,,,,,"[ 'x', 'y', 'health' ]",N
 ,,,,,,[ ],N
-19,"What is printed to console.log?
+16,"What is printed to console.log?
 
 var healthMixin = {
     health: 100,
@@ -483,7 +429,7 @@ console.log(goo.x, goo.y, goo.z);",Practical,Advanced,JavaScript,5 Minutes,2 4 5
 ,,,,,,2 4 0,N
 ,,,,,,NaN 4 5,N
 ,,,,,,2 4 undefined,N
-20,"What is printed to console.log?
+17,"What is printed to console.log?
 
 var healthMixin = {
     health: 100,
@@ -546,7 +492,7 @@ console.log(goo.x, goo.y);",Practical,Advanced,JavaScript,5 Minutes,Error is thr
 ,,,,,,10 10,N
 ,,,,,,20 20,N
 ,,,,,,0 0,N
-21,"What is printed in console.log?
+18,"What is printed in console.log?
 
 var chainer = function (f) {
     return function () {
@@ -565,7 +511,7 @@ console.log(bobby.talk().toString(), bobby.talk().talk().name);",Practical,Advan
 ,,,,,,Bobby Bobby,N
 ,,,,,,undefined Bobby,N
 ,,,,,,Error is thrown,N
-22,"What is printed in console.log?
+19,"What is printed in console.log?
 
 var chainer = function (f) {
     return function () {
@@ -590,7 +536,7 @@ console.log(bobby.censor.call(bernie).name);",Practical,Advanced,JavaScript,2 Mi
 ,,,,,,Bernie,N
 ,,,,,,Bobby,N
 ,,,,,,undefined,N
-23,"What is printed in console.log?
+20,"What is printed in console.log?
 
 var chainer = function (f) {
     return function () {
@@ -616,7 +562,7 @@ console.log(bernie.talk().name, bobby.talk().name);",Practical,Advanced,JavaScri
 ,,,,,,Bobby Bobby,N
 ,,,,,,undefined Bobby,N
 ,,,,,,Bernie Bernie,N
-24,"What gets printed to console.log?
+21,"What gets printed to console.log?
 
 var f = (function () {
     f1 = function (a) {
@@ -633,7 +579,7 @@ console.log(f(2));",Practical,Advanced,JavaScript,2 Minutes,10,Y
 ,,,,,,8,N
 ,,,,,,6,N
 ,,,,,,Error is thrown,N
-25,"What gets printed to console.log?
+22,"What gets printed to console.log?
 
 var f = (function () {
     var f1 = function (a) {
@@ -647,7 +593,7 @@ var f = (function () {
 console.log(f(2));",Practical,Advanced,JavaScript,2 Minutes,6,Y
 ,,,,,,NaN,N
 ,,,,,,Error is thrown,N
-26,"What gets printed to console.log?
+23,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 10], [""1"", 10], [1, 100]];
 var mapped = new Map(items);
@@ -655,7 +601,7 @@ console.log(mapped.size, mapped.get(1), mapped.get(0), mapped.get(""0""));",Prac
 ,,,,,,4 100 10 10,N
 ,,,,,,undefined 100 0 10,N
 ,,,,,,undefined 100 10 10,N
-27,"What gets printed to console.log?
+24,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 10], [""1"", 10], [1, ""100""]];
 var mapped = new Map(items);
@@ -664,7 +610,41 @@ console.log(mapped.get(0), mapped.get(1));",Practical,Advanced,JavaScript,2 Minu
 ,,,,,,0 1001,N
 ,,,,,,1 101,N
 ,,,,,,0 101,N
-28,"What gets printed to console.log?
+25,"What is printed to console.log?
+
+console.log(parseInt(""abc"") < Infinity);",Practical,Guru,JavaScript,2 Minutes,false,Y
+,,,,,,true,N
+,,,,,,Error is thrown,N
+,,,,,,NaN,N
+26,"What is printed to console.log?
+
+var x = ""42"" + NaN;
+x = parseInt(x);
+console.log(x + x - ""42"");",Practical,Guru,JavaScript,2 Minutes,42,Y
+,,,,,,424242,N
+,,,,,,8442,N
+,,,,,,NaN,N
+27,"What is printed to console.log?
+
+console.log(NaN + NaN + ""NaN"" - NaN);",Practical,Guru,JavaScript,2 Minutes,NaN,Y
+,,,,,,NaNNaN,N
+,,,,,,NaNNaNNaN,N
+,,,,,,Error is thrown,N
+28,"What is printed to console.log?
+
+var f = function (a) {
+    if (a == null) {
+        console.log(""Hello"");
+    }
+    if (a === null) {
+        console.log(""World"");
+    }
+};
+f();",Practical,Guru,JavaScript,2 Minutes,Hello,Y
+,,,,,,Hello World,N
+,,,,,,World,N
+,,,,,,Error is thrown,N
+29,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
 var mapped = new Map(items);
@@ -675,11 +655,11 @@ mapped.forEach((v, k) => finalMap.set(k, v));
 for (let item of mapped) {
     console.log(item);
     break;
-}",Practical,Advanced,JavaScript,2 Minutes,"[0, 1]",Y
+}",Practical,Guru,JavaScript,2 Minutes,"[0, 1]",Y
 ,,,,,,"[1, 0]",N
 ,,,,,,"[0, 0]",N
 ,,,,,,error is thrown,N
-29,"What gets printed to console.log?
+30,"What gets printed to console.log?
 
 var items = [[0, 0], [""0"", 1], [1, 2], [""1"", 3]];
 var mapped = new Map(items);
@@ -692,7 +672,170 @@ for (let item of mapped) {
     let [k, v] = item;
     final = [k, v * 10];
 };
-console.log(final[0], final[1]);",Practical,Advanced,JavaScript,2 Minutes,"[1, 0]",Y
+console.log(final[0], final[1]);",Practical,Guru,JavaScript,2 Minutes,"[1, 0]",Y
 ,,,,,,"[1, 2]",N
 ,,,,,,"[0, 1]",N
 ,,,,,,error is thrown,N
+31,"What is printed to console.log?
+
+console.log(Number(""false"") == Number(false));",Practical,Guru,JavaScript,2 Minutes,false,Y
+,,,,,,true,N
+,,,,,,Error is thrown,N
+32,"What is printed to console.log?
+
+console.log(typeof String(""abc"") === typeof ""abc"");",Practical,Guru,JavaScript,2 Minutes,true,Y
+,,,,,,false,N
+,,,,,,Error is thrown,N
+33,"What is printed to console.log?
+
+console.log(typeof NaN === typeof Number);",Practical,Guru,JavaScript,2 Minutes,false,Y
+,,,,,,true,N
+34,"What gets printed to console.log?
+
+var Animal = function () {};
+Animal.prototype.words = [];
+Animal.prototype.memorize = function (word) {
+    this.words.push(word);
+};
+Animal.prototype.speak = function () {
+    return this.words.join("" "");
+};
+var cat = new Animal();
+cat.memorize(""meow"");
+cat.memorize(""miew"");
+var dog = new Animal();
+dog.memorize(""woof"");
+var bird = new Animal();
+console.log(bird.speak());",Practical,Guru,JavaScript,2 Minutes,meow miew woof,Y
+,,,,,,""" """,N
+,,,,,,undefined,N
+,,,,,,meow miew,N
+35,"What gets printed to console.log?
+
+setTimeout(function () {
+    console.log(""Hello"");
+    setTimeout(arguments.callee, 100);
+}, 100);",Practical,Guru,JavaScript,2 Minutes,Hello... (repeateding forever),Y
+,,,,,,Hello,N
+,,,,,,Hello then an Error is thrown,N
+36,"What gets printed to console.log?
+
+Function.prototype.memoize = function() {
+    var self = this;
+    var cache = {};
+    return function () {
+        var args = Array.prototype.slice.call(arguments);
+        var argsKey = args.join(""-"");
+        if (args in cache) {
+            return cache[argsKey];
+        } else {
+            return cache[argsKey] = self.apply(self, args);
+        }
+    };
+};
+var f = function (a, b) {
+    return a + b
+};
+var test = f.memoize();
+test(""4-2"");
+console.log(test(4 - 2));",Practical,Guru,JavaScript,2 Minutes,NaN,Y
+,,,,,,2,N
+,,,,,,"""4-2""",N
+,,,,,,Error is thrown,N
+37,"What gets printed to console.log?
+
+var o = {};
+o[42] = 100;
+o[""42""] = 200;
+console.log(o[42], o[""42""]);",Practical,Guru,JavaScript,2 Minutes,200 200,Y
+,,,,,,100 200,N
+,,,,,,undefined 200,N
+38,"Of the answers, which one is arguably the best reason this could _could_ cause an error?
+
+var o = {
+    100: ""hello"",
+    ""200"": ""world"",
+    test: ""param"",
+};",Practical,Guru,"JavaScript, Browser",2 Minutes,Trailing comma after 'test' parameter could break old IE browsers.,Y
+,,,,,,Using quotes on keys can break old IE browsers.,N
+,,,,,,There isn't anything wrong with this code even in legacy browsers.,N
+39,"Of the answers, which one is arguably the best reasoning for why the following exists in code supporting old browsers?
+
+node.onclick = function (e) {
+    e = e || window.event;
+    // ... other code here
+};",Practical,Guru,"JavaScript, Browser",2 Minutes,Older Internet Explorer browsers would not pass the event object directly.,Y
+,,,,,,Older Firefox browsers would not pass the event object directly.,N
+,,,,,,By Internet Explorer 8 this code was no longer needed.,N
+40,"What gets printed to console.log?
+
+var f = function () {
+    return
+    {
+        n: 1000
+    };
+};
+console.log(f().n);",Practical,Guru,JavaScript,2 Minutes,Error is thrown,Y
+,,,,,,1000,N
+,,,,,,undefined,N
+41,"What gets printed to console.log?
+
+var f = function (a, b, c) {};
+console.log(f.name, f.length);",Practical,Guru,JavaScript,2 Minutes,""""" 3",Y
+,,,,,,anonymous 3,N
+,,,,,,undefined 3,N
+,,,,,,f 3,N
+42,"What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    if (Math.random() < 0.5) {
+        resolve(1);
+    } else {
+        reject(3);
+    }
+}), Promise.reject(2)]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});",Practical,Guru,"JavaScript, ECMAScript 6",2 Minutes,1 or 3,Y
+,,,,,,2,N
+,,,,,,1,N
+,,,,,,udnefined,N
+43,"What is printed to console.log?
+
+Promise.race([new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(10);
+    }, 100);
+}), new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(42);
+    }, 10);
+})]).then(function (val) {
+    console.log(val);
+}).catch(function (val) {
+    console.log(val);
+});",Practical,Guru,"JavaScript, ECMAScript 6",2 Minutes,42,Y
+,,,,,,10,N
+,,,,,,100,N
+,,,,,,udnefined,N
+44,"What is printed to console.log?
+
+var genGen = function(i) {
+    return function* () {
+        while (true) {
+            yield i;
+        }
+    };
+};
+var g = genGen(5)();
+for (let i of g) {
+    if (i % 2) {
+        break;
+    } else {
+        continue;
+    }
+}
+console.log(g.next().done);",Practical,Guru,JavaScript,2 Minutes,false,Y
+,,,,,,true,N
+,,,,,,undefined,N
