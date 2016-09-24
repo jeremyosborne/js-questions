@@ -19,7 +19,7 @@ Promise.resolve({
     console.log(o.name, o.job, o.school);
 }, function (o) {
     console.log(o.name, o.job, o.school);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane Heiress Uni,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",2 Minutes,Jane Heiress Uni,Y
 ,,,,,,Jane Heiress Elementary,N
 ,,,,,,Jane Slob Uni,N
 ,,,,,,Jane Slob Elementary,N
@@ -43,7 +43,7 @@ Promise.reject({
     console.log(o.name, o.job, o.school);
 }, function (o) {
     console.log(o.name, o.job, o.school);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane Slob Uni,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",2 Minutes,Jane Slob Uni,Y
 ,,,,,,Jane Heiress Uni,N
 ,,,,,,Jane Heiress Elementary,N
 ,,,,,,Jane Slob Elementary,N
@@ -67,7 +67,7 @@ Promise.reject({
     console.log(o.name, o.job, o.school);
 }, function (o) {
     console.log(o.name, o.job, o.school);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane Slob Elementary,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",2 Minutes,Jane Slob Elementary,Y
 ,,,,,,Jane Slob Uni,N
 ,,,,,,Jane Heiress Uni,N
 ,,,,,,Jane Heiress Elementary,N
@@ -89,7 +89,7 @@ Promise.resolve({
     console.log(o.name, o.job, o.school, o.pet);
 }, function (o) {
     console.log(o.name, o.job);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane Heiress undefined undefined,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",2 Minutes,Jane Heiress undefined undefined,Y
 ,,,,,,Jane Heiress Uni Fido,N
 ,,,,,,Jane Heiress Uni undefined,N
 ,,,,,,Jane Heiress,N
@@ -112,7 +112,7 @@ Promise.resolve({
     console.log(o.name, o.job, o.school, o.pet);
 }, function (o) {
     console.log(o.name, o.job);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane Heiress,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",2 Minutes,Jane Heiress,Y
 ,,,,,,Jane Heiress undefined undefined,N
 ,,,,,,Jane Heiress Uni Fido,N
 ,,,,,,Jane Heiress Uni undefined,N
@@ -129,7 +129,7 @@ var p = Promise.resolve({
 }).then(function (o) {
     o = o || {};
     console.log(o.name, o.job, o.school);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,undefined undefined undefined,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",2 Minutes,undefined undefined undefined,Y
 ,,,,,,Jane Heiress undefined,N
 ,,,,,,Jane Heiress Uni,N
 ,,,,,,Jane undefined undefined,N
@@ -152,7 +152,7 @@ p.then(function (o) {
 p.then(function (o) {
     o = o || {};
     console.log(o.name, o.job, o.school);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane Heiress Uni,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",5 Minutes,Jane Heiress Uni,Y
 ,,,,,,undefined undefined undefined,N
 ,,,,,,Jane Heiress undefined,N
 ,,,,,,Jane undefined undefined,N
@@ -188,7 +188,7 @@ janeGenerator().then(function (o) {
     console.log(o.name, o.job, o.house);
 }).catch(function (o) {
     console.log(o.name, o.job);
-});",Practical,Advanced,"JavaScript, ECMAScript 6, Promises",2 Minutes,Jane CEO Big or Jane VP Big,Y
+});",Practical,Advanced,"JavaScript, ECMAScript 6, Asynchronous",5 Minutes,Jane CEO Big or Jane VP Big,Y
 ,,,,,,Jane CEO or Jane VP,N
 ,,,,,,Jane undefined,N
 ,,,,,,Jane CEO undefined or Jane VP undefined,N
@@ -508,7 +508,7 @@ var f = function () {
     return cache[name];
 };
 var name = s.getterProxy(f);
-console.log(name);",Practical,Advanced,JavaScript,2 Minutes,Error is thrown,Y
+console.log(name);",Practical,Advanced,JavaScript,5 Minutes,Error is thrown,Y
 ,,,,,,Florence,N
 ,,,,,,Katie,N
 ,,,,,,undefined,N

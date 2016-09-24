@@ -35,11 +35,11 @@
 ,,,,,,port,N
 ,,,,,,retrieve,N
 ,,,,,,find,N
-9,"In the browser, what object is consider the global object?",Practical,Beginner,JavaScript,30 Seconds,window,Y
+9,"In the browser, what object is consider the global object?",Practical,Beginner,"JavaScript, Browser",30 Seconds,window,Y
 ,,,,,,document,N
 ,,,,,,global,N
 ,,,,,,page,N
-10,"In the browser, which of the following will create a new variable scope?",Practical,Beginner,JavaScript,30 Seconds,function block,Y
+10,"In the browser, which of the following will create a new variable scope?",Practical,Beginner,"JavaScript, Browser",30 Seconds,function block,Y
 ,,,,,,if block,N
 ,,,,,,for block,N
 ,,,,,,while block,N
@@ -78,7 +78,7 @@ console.log(x);",Practical,Beginner,JavaScript,30 Seconds,100,Y
 ,,,,,,.repr(),N
 ,,,,,,.str(),N
 ,,,,,,.serialize(),N
-19,What is the global object designed to be used to convert objects to JSON?,Practical,Beginner,JavaScript,30 Seconds,JSON,Y
+19,What is the global object designed to be used to convert objects to JSON?,Practical,Beginner,"JavaScript, JSON",30 Seconds,JSON,Y
 ,,,,,,Marshal,N
 ,,,,,,String,N
 ,,,,,,Send,N

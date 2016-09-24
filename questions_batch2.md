@@ -49,6 +49,7 @@ console.log(1);
         * Intermediate
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -79,6 +80,7 @@ console.log(a);
         * Intermediate
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -106,6 +108,7 @@ f();
         * Intermediate
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -132,6 +135,7 @@ setInterval(f, 10);
         * Intermediate
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -162,6 +166,7 @@ console.log(1);
     * Tags
         * JavaScript
         * Browser
+        * Asynchronous
 2. meta end
 
 
@@ -189,6 +194,7 @@ clearInterval(id);
         * Intermediate
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -209,6 +215,8 @@ Assuming we are working with idiomatic Node.js, what would be an accurate statem
         * Intermediate
     * Tags
         * JavaScript
+        * Node.js
+        * Asynchronous
 2. meta end
 
 
@@ -240,6 +248,7 @@ console.log("hello")
         * Intermediate
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 

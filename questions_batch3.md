@@ -418,6 +418,7 @@ module.exports.test = function (i) { return i; };
         * Intermediate
     * Tags
         * JavaScript
+        * Node.js
         * ECMAScript 6
 2. meta end
 
@@ -701,6 +702,7 @@ What is printed to console.log?
         * Advanced
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -733,6 +735,7 @@ What is printed to console.log?
         * Advanced
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -763,6 +766,7 @@ setTimeout(dog.speak, 10);
         * Advanced
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -800,6 +804,7 @@ console.log(n);
     * Tags
         * JavaScript
         * ECMAScript 6
+        * Asynchronous
 2. meta end
 
 
@@ -832,6 +837,7 @@ Promise.all([pgen(), pgen(), pgen()])
     * Tags
         * JavaScript
         * ECMAScript 6
+        * Asynchronous
 2. meta end
 
 
@@ -862,6 +868,7 @@ Promise.all([Promise.resolve(1), Promise.reject(new Error("Error!")), Promise.re
     * Tags
         * JavaScript
         * ECMAScript 6
+        * Asynchronous
 2. meta end
 
 
@@ -1254,6 +1261,7 @@ window.addEventListener("load", ev1);
         * Advanced
     * Tags
         * JavaScript
+        * Browser
 2. meta end
 
 
@@ -1287,6 +1295,7 @@ window.addEventListener("load", ev2);
         * Advanced
     * Tags
         * JavaScript
+        * Browser
 2. meta end
 
 

@@ -44,7 +44,7 @@ Promise.resolve({
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -87,7 +87,7 @@ Promise.reject({
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -130,7 +130,7 @@ Promise.reject({
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -171,7 +171,7 @@ Promise.resolve({
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -213,7 +213,7 @@ Promise.resolve({
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -249,7 +249,7 @@ var p = Promise.resolve({
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -283,7 +283,7 @@ p.then(function (o) {
         * Jane Heiress undefined
         * Jane undefined undefined
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -291,7 +291,7 @@ p.then(function (o) {
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -338,7 +338,7 @@ janeGenerator().then(function (o) {
         * Jane undefined
         * Jane CEO undefined or Jane VP undefined
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -346,7 +346,7 @@ janeGenerator().then(function (o) {
     * Tags
         * JavaScript
         * ECMAScript 6
-        * Promises
+        * Asynchronous
 2. meta end
 
 
@@ -939,7 +939,7 @@ console.log(name);
         * Katie
         * undefined
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level

@@ -32,13 +32,14 @@ console.log(q());
         * [ 1 ]
         * error is thrown
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
         * Advanced
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -71,13 +72,14 @@ setTimeout(function () {
         * [ 1 ]
         * [ 1, 3 ]
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
         * Advanced
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -150,13 +152,14 @@ console.log(finalValue.value, finalValue.done);
         * 0 true
         * 1 true
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
         * Advanced
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -195,6 +198,7 @@ console.log(items);
         * Advanced
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -227,6 +231,7 @@ console.log(val.value, val.done);
         * Advanced
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -253,6 +258,7 @@ Promise.race([Promise.resolve(1), Promise.reject(2)]).then(function (val) {
     * Tags
         * JavaScript
         * ECMAScript 6
+        * Asynchronous
 2. meta end
 
 
@@ -371,7 +377,7 @@ console.log(f()(3)(10));
         * 60
         * 6
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -403,7 +409,7 @@ console.log(three()(1, 2, 3), three()(1, 2));
         * 6 undefined
         * 3 undefined
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -934,7 +940,7 @@ console.log(bernie.talk().name, bobby.talk().name);
         * undefined Bobby
         * Bernie Bernie
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -1045,6 +1051,7 @@ console.log(mapped.size, mapped.get(1), mapped.get(0), mapped.get("0"));
         * Advanced
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -1071,6 +1078,7 @@ console.log(mapped.get(0), mapped.get(1));
         * Advanced
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -1201,13 +1209,14 @@ for (let item of mapped) {
         * [0, 0]
         * error is thrown
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
         * Guru
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -1235,13 +1244,14 @@ console.log(final[0], final[1]);
         * [0, 1]
         * error is thrown
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
         * Guru
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end
 
 
@@ -1337,7 +1347,7 @@ console.log(bird.speak());
         * undefined
         * meow miew
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -1369,6 +1379,7 @@ setTimeout(function () {
         * Guru
     * Tags
         * JavaScript
+        * Asynchronous
 2. meta end
 
 
@@ -1403,7 +1414,7 @@ console.log(test(4 - 2));
         * "4-2"
         * Error is thrown
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -1574,6 +1585,7 @@ Promise.race([new Promise(function (resolve, reject) {
     * Tags
         * JavaScript
         * ECMAScript 6
+        * Asynchronous
 2. meta end
 
 
@@ -1602,7 +1614,7 @@ Promise.race([new Promise(function (resolve, reject) {
         * 100
         * udnefined
     * Time
-        * 2 Minutes
+        * 5 Minutes
     * Category
         * Practical
     * Level
@@ -1610,6 +1622,7 @@ Promise.race([new Promise(function (resolve, reject) {
     * Tags
         * JavaScript
         * ECMAScript 6
+        * Asynchronous
 2. meta end
 
 
@@ -1647,4 +1660,5 @@ console.log(g.next().done);
         * Guru
     * Tags
         * JavaScript
+        * ECMAScript 6
 2. meta end

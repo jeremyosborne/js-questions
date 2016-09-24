@@ -214,6 +214,7 @@ In the browser, what object is consider the global object?
         * Beginner
     * Tags
         * JavaScript
+        * Browser
 2. meta end
 
 
@@ -235,6 +236,7 @@ In the browser, which of the following will create a new variable scope?
         * Beginner
     * Tags
         * JavaScript
+        * Browser
 2. meta end
 
 
@@ -385,7 +387,8 @@ What does JSON stand for?
     * Level
         * Beginner
     * Tags
-        * JavaScript, JSON
+        * JavaScript
+        * JSON
 2. meta end
 
 
@@ -428,6 +431,7 @@ What is the global object designed to be used to convert objects to JSON?
         * Beginner
     * Tags
         * JavaScript
+        * JSON
 2. meta end
 
 

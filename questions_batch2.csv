@@ -9,7 +9,7 @@ var f = function () {
     console.log(2);
 };
 setTimeout(f, 10);
-console.log(1);",Practical,Intermediate,JavaScript,1 Minute,"1, 2",Y
+console.log(1);",Practical,Intermediate,"JavaScript, Asynchronous",1 Minute,"1, 2",Y
 ,,,,,,"2, 1",N
 ,,,,,,1,N
 2,"What is printed by the console.log statements?
@@ -22,7 +22,7 @@ var f = function () {
     console.log(b);
 };
 setTimeout(f, 10);
-console.log(a);",Practical,Intermediate,JavaScript,1 Minute,"0, 3",Y
+console.log(a);",Practical,Intermediate,"JavaScript, Asynchronous",1 Minute,"0, 3",Y
 ,,,,,,"0, 1",N
 ,,,,,,"2, 3",N
 3,"What is printed by the console.log statement?
@@ -32,7 +32,7 @@ var f = function () {
     console.log(i++);
     setTimeout(f, 100);
 };
-f();",Practical,Intermediate,JavaScript,1 Minute,"1, 1, 1, 1, 1...",Y
+f();",Practical,Intermediate,"JavaScript, Asynchronous",1 Minute,"1, 1, 1, 1, 1...",Y
 ,,,,,,"1, 2, 3, 4, 5...",N
 ,,,,,,1,N
 4,"What is printed by console.log?
@@ -41,7 +41,7 @@ var f = function () {
     var i = 1;
     console.log(i++);
 };
-setInterval(f, 10);",Practical,Intermediate,JavaScript,1 Minute,"1, 1, 1, 1, 1...",Y
+setInterval(f, 10);",Practical,Intermediate,"JavaScript, Asynchronous",1 Minute,"1, 1, 1, 1, 1...",Y
 ,,,,,,"1, 2, 3, 4, 5...",N
 ,,,,,,1,N
 5,"Assuming we are in a web browser, what is printed by console.log?
@@ -52,7 +52,7 @@ window.addEventListener(""load"", function () {
     });
     console.log(3);
 });
-console.log(1);",Practical,Intermediate,"JavaScript, Browser",1 Minute,"1, 3",Y
+console.log(1);",Practical,Intermediate,"JavaScript, Browser, Asynchronous",1 Minute,"1, 3",Y
 ,,,,,,"1, 2, 3",N
 ,,,,,,"1, 3, 2",N
 ,,,,,,1,N
@@ -62,11 +62,11 @@ var f = function () {
     console.log(42);
 };
 var id = setInterval(f, 10);
-clearInterval(id);",Practical,Intermediate,JavaScript,1 Minute,nothing is printed,Y
+clearInterval(id);",Practical,Intermediate,"JavaScript, Asynchronous",1 Minute,nothing is printed,Y
 ,,,,,,42,N
 ,,,,,,"42, 42, 42, 42",N
 ,,,,,,Error,N
-7,"Assuming we are working with idiomatic Node.js, what would be an accurate statement to make about `fs.readFile` and `fs.readFileSync`?",Practical,Intermediate,JavaScript,1 Minute,fs.readFileSync is blocking and the code will wait for the function to return before continuing.,Y
+7,"Assuming we are working with idiomatic Node.js, what would be an accurate statement to make about `fs.readFile` and `fs.readFileSync`?",Practical,Intermediate,"JavaScript, Node.js, Asynchronous",1 Minute,fs.readFileSync is blocking and the code will wait for the function to return before continuing.,Y
 ,,,,,,fs.readFile is blocking and will wait for the function to return before continuing.,N
 ,,,,,,fs.readFileSync will optionally take a callback.,N
 8,"What is printed by console.log?
@@ -79,7 +79,7 @@ setTimeout(function () {
 setTimeout(function () {
     console.log(""hi"");
 }, 200);
-console.log(""hello"")",Practical,Intermediate,JavaScript,1 Minute,"hello, 1, hi",Y
+console.log(""hello"")",Practical,Intermediate,"JavaScript, Asynchronous",1 Minute,"hello, 1, hi",Y
 ,,,,,,"hello, hi",N
 ,,,,,,"hello, 1, hi, 2, 3, 4....",N
 ,,,,,,"hello 0, hi",N
